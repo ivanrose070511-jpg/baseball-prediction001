@@ -1,0 +1,15 @@
+{
+  "name": "asian-baseball-market-board",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:data": "node scripts/update-predictions.mjs",
+    "build": "node scripts/build-static.mjs",
+    "deploy": "npm run update:data && npm run build && wrangler deploy",
+    "deploy:static": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.24.4"
+  }
+}

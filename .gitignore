@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.wrangler/
+deploy-static-*/
+網站部署資料夾/
+*.zip
+*.log

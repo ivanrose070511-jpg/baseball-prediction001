@@ -1,0 +1,45 @@
+name: Update Predictions And Deploy
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Asia/Taipei weekday 14:00
+    - cron: "0 6 * * 1-5"
+    # Asia/Taipei weekend 11:00
+    - cron: "0 3 * * 6,0"
+    # Asia/Taipei daily 22:30
+    - cron: "30 14 * * *"
+
+concurrency:
+  group: update-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update schedule, odds, predictions, and results
+        run: npm run update:data
+
+      - name: Build static assets
+        run: npm run build
+
+      - name: Deploy to Cloudflare Workers
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

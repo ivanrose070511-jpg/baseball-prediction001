@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>亞洲職棒盤口預測</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark">AB</span>
+        <span>亞洲職棒預測</span>
+      </a>
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#today">今日預測</a>
+        <a href="#past">過去預測</a>
+        <a href="#future">未來賽程</a>
+        <a href="#about">關於</a>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="scoreboard" id="top" aria-labelledby="page-title">
+        <div class="scoreboard__image" aria-hidden="true"></div>
+        <div class="scoreboard__shade"></div>
+        <div class="scoreboard__content">
+          <p class="eyebrow">KBO · NPB · CPBL</p>
+          <h1 id="page-title">每日職棒盤口重點整理</h1>
+          <p class="summary" id="hero-summary">正在載入今日預測...</p>
+          <div class="hero-meta" aria-label="資料狀態">
+            <span id="last-updated">更新時間 --</span>
+            <span id="prediction-count">0 場賽事</span>
+            <span>僅供參考，非投注建議</span>
+          </div>
+          <div class="hero-stats" aria-label="網站摘要">
+            <div>
+              <strong id="today-count">0</strong>
+              <span>今日預測</span>
+            </div>
+            <div>
+              <strong id="league-count">3</strong>
+              <span>涵蓋聯盟</span>
+            </div>
+            <div>
+              <strong>每日</strong>
+              <span>更新看板</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="snapshot" id="record" aria-label="預測戰績">
+        <div class="profit-panel">
+          <span class="metric-label">預測戰績</span>
+          <strong>尚未結算</strong>
+          <p>正式接上每日賽果後，這裡會顯示命中率、勝敗紀錄與近期表現。</p>
+        </div>
+        <div class="record-grid">
+          <div>
+            <span class="record-dot record-dot--win"></span>
+            <strong>0</strong>
+            <span>命中</span>
+          </div>
+          <div>
+            <span class="record-dot record-dot--loss"></span>
+            <strong>0</strong>
+            <span>未中</span>
+          </div>
+          <div>
+            <span class="record-dot record-dot--push"></span>
+            <strong>0</strong>
+            <span>和局</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="insights" aria-label="今日重點">
+        <div>
+          <span class="metric-label">平均信心</span>
+          <strong id="average-confidence">--%</strong>
+        </div>
+        <div>
+          <span class="metric-label">大小分傾向</span>
+          <strong id="highest-total">--</strong>
+        </div>
+        <div>
+          <span class="metric-label">熱門聯盟</span>
+          <strong id="top-league">--</strong>
+        </div>
+      </section>
+
+      <section class="league-overview" id="leagues" aria-label="聯盟列表">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Leagues</p>
+            <h2>聯盟分區</h2>
+          </div>
+          <p>KBO、NPB、CPBL</p>
+        </div>
+        <div class="league-board" id="league-board"></div>
+      </section>
+
+      <section class="toolbar" aria-label="預測篩選">
+        <label class="field">
+          <span>聯盟</span>
+          <select id="league-filter">
+            <option value="all">全部</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>信心門檻</span>
+          <input id="confidence-filter" type="range" min="0" max="100" step="5" value="0" />
+        </label>
+        <output class="confidence-output" id="confidence-output" for="confidence-filter">0%+</output>
+        <button class="ghost-button" id="reset-filters" type="button">重設</button>
+      </section>
+
+      <section class="view-tabs" aria-label="頁面切換">
+        <button class="view-tab is-active" type="button" data-view="today">今日賽程與預測</button>
+        <button class="view-tab" type="button" data-view="past">過去賽程與預測</button>
+        <button class="view-tab" type="button" data-view="future">未來賽程</button>
+      </section>
+
+      <section class="predictions view-panel is-active" id="today" data-panel="today" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h2>今日賽程與今日預測</h2>
+          </div>
+          <p id="today-status">顯示全部預測</p>
+        </div>
+        <div class="prediction-grid" id="today-grid"></div>
+        <p class="empty-state" id="today-empty" hidden>今日沒有符合條件的賽程。</p>
+      </section>
+
+      <section class="predictions view-panel" id="past" data-panel="past" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">History</p>
+            <h2>過去賽程與過去預測</h2>
+          </div>
+          <p id="past-status">顯示最近賽事</p>
+        </div>
+        <div class="prediction-grid" id="past-grid"></div>
+        <p class="empty-state" id="past-empty" hidden>沒有符合條件的過去賽程。</p>
+      </section>
+
+      <section class="predictions view-panel" id="future" data-panel="future" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Upcoming</p>
+            <h2>未來賽程</h2>
+          </div>
+          <p id="future-status">顯示未來賽程</p>
+        </div>
+        <div class="schedule-table" id="future-grid"></div>
+        <p class="empty-state" id="future-empty" hidden>沒有符合條件的未來賽程。</p>
+      </section>
+
+      <section class="about-panel" id="about">
+        <p class="eyebrow">About</p>
+        <h2>關於本站</h2>
+        <p>
+          本站以 KBO、NPB、CPBL 官方賽程為基礎，分成今日預測、過去預測與未來賽程。預測內容聚焦大小分、讓分過盤與盤口來源，僅供資料整理與觀察參考。
+        </p>
+      </section>
+    </main>
+
+    <script src="data/predictions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
