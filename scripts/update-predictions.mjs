@@ -14,6 +14,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const poolPath = path.join(root, "data", "team-pool.json");
 const outputPath = path.join(root, "data", "predictions.js");
+const leagueBySource = {
+  KBO: "KBO 韓國職棒",
+  NPB: "NPB 日本職棒",
+  CPBL: "CPBL 中華職棒"
+};
 
 const now = new Date();
 const dateArg = process.argv.find((arg) => arg.startsWith("--date="))?.slice("--date=".length);
@@ -54,6 +59,35 @@ function slugify(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+async function readExistingPayload() {
+  try {
+    const text = await fs.readFile(outputPath, "utf8");
+    const json = text.match(/window\.SCORE_PREDICTIONS\s*=\s*([\s\S]*);\s*$/)?.[1];
+    return json ? JSON.parse(json) : null;
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+}
+
+function getFailedLeagues(...results) {
+  const failed = new Set();
+  for (const result of results) {
+    for (const error of result.errors || []) {
+      const source = String(error).split(":")[0];
+      if (leagueBySource[source]) failed.add(leagueBySource[source]);
+    }
+  }
+  return failed;
+}
+
+function mergeLeagueFallback(current, previous, failedLeagues) {
+  if (!previous || failedLeagues.size === 0) return current;
+  const currentLeagues = new Set(current.map((game) => game.league));
+  const fallback = previous.filter((game) => failedLeagues.has(game.league) && !currentLeagues.has(game.league));
+  return [...current, ...fallback];
 }
 
 function buildPrediction(sportConfig, gameIndex, random) {
@@ -168,6 +202,7 @@ async function fetchMany(dayOffsets, options) {
 let todayResult = { games: [], errors: [], successfulSources: 0 };
 let pastResult = { games: [], errors: [], successfulSources: 0 };
 let futureResult = { games: [], errors: [], successfulSources: 0 };
+const existingPayload = await readExistingPayload();
 
 try {
   todayResult = await fetchMany([0], { includeCompleted: true });
@@ -183,6 +218,14 @@ let pastPredictions = pastResult.games
   .map(addPredictionFields)
   .sort((a, b) => new Date(b.startTime) - new Date(a.startTime));
 let futureSchedules = futureResult.games.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
+const failedLeagues = getFailedLeagues(todayResult, pastResult, futureResult);
+todayPredictions = mergeLeagueFallback(todayPredictions, existingPayload?.views?.today || [], failedLeagues);
+pastPredictions = mergeLeagueFallback(pastPredictions, existingPayload?.views?.past || [], failedLeagues).sort(
+  (a, b) => new Date(b.startTime) - new Date(a.startTime)
+);
+futureSchedules = mergeLeagueFallback(futureSchedules, existingPayload?.views?.future || [], failedLeagues).sort(
+  (a, b) => new Date(a.startTime) - new Date(b.startTime)
+);
 const oddsResult = await fetchOdds();
 const recentStats = buildRecentStats(pastResult.games);
 todayPredictions = applyOddsToPredictions(todayPredictions, oddsResult.odds);
@@ -193,6 +236,9 @@ const aiResult = await applyAiPredictions(todayPredictions);
 todayPredictions = aiResult.games;
 let predictions = todayPredictions;
 let summary = `已抓取官方賽程：今日 ${todayPredictions.length} 場、過去 ${pastPredictions.length} 場、未來 ${futureSchedules.length} 場。`;
+if (failedLeagues.size > 0) {
+  summary += ` ${[...failedLeagues].join("、")} 本次抓取失敗，已保留上一版資料。`;
+}
 
 const totalSuccessfulSources =
   todayResult.successfulSources + pastResult.successfulSources + futureResult.successfulSources;

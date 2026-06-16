@@ -45,16 +45,31 @@ const PLAYSPORT_LEAGUES = [
     allianceId: 9,
     teams: {
       韓華: "韓華鷹",
+      華老鷹: "韓華鷹",
+      韓華鷹: "韓華鷹",
       斗山: "斗山熊",
+      斗山熊: "斗山熊",
       三星: "三星獅",
+      三星獅: "三星獅",
       樂天: "樂天巨人",
+      樂天巨人: "樂天巨人",
       起亞: "起亞虎",
+      起亞虎: "起亞虎",
       NC: "NC恐龍",
+      恐龍: "NC恐龍",
+      NC恐龍: "NC恐龍",
       SSG: "SSG登陸者",
+      登陸者: "SSG登陸者",
+      SSG登陸者: "SSG登陸者",
       培證: "培證英雄",
       英雄: "培證英雄",
+      培證英雄: "培證英雄",
       KT: "KT巫師",
-      LG: "LG雙子"
+      巫師: "KT巫師",
+      KT巫師: "KT巫師",
+      LG: "LG雙子",
+      雙子: "LG雙子",
+      LG雙子: "LG雙子"
     }
   }
 ];
@@ -191,15 +206,21 @@ function findPlaySportMarkets(lines) {
   return { spreads, totals };
 }
 
-function findPitcherCandidate(lines) {
+function findPitcherCandidate(lines, leagueConfig) {
   return (
     lines.find(
       (line) =>
+        !findTeam(line, leagueConfig.teams) &&
+        !Object.values(leagueConfig.teams).includes(line) &&
         !/^(客|主|大|小|V\.S\.|對戰資訊)$/.test(line) &&
+        !/^©/.test(line) &&
+        !/^(AM|PM)\s+\d{1,2}:\d{2}$/.test(line) &&
+        !/^\d{1,2}:\d{2}~\d{1,2}:\d{2}$/.test(line) &&
+        !/^\d{2,4}-\d{4,}$/.test(line) &&
         !/^[+-]?\d+(?:\.\d+)?$/.test(line) &&
         !/^,/.test(line) &&
         !/%$/.test(line) &&
-        !/贏|輸|分|單|場|讓|暫無資料/.test(line)
+        !/贏|輸|分|單|場|讓|暫無資料|預測賽事|客服|登入|聯絡我們|常見問題|服務條款|關於我們|著作權|隱私|Privacy|Terms/.test(line)
     ) || ""
   );
 }
@@ -224,13 +245,13 @@ function parsePlaySportPage(html, leagueConfig, date) {
     const home = teamPositions[1].team;
     const afterAway = window.slice(teamPositions[0].cursor + 1, teamPositions[1].cursor);
     const afterHome = window.slice(teamPositions[1].cursor + 1, teamPositions[1].cursor + 12);
-    const awayPitcher = findPitcherCandidate(afterAway);
-    const homePitcher = findPitcherCandidate(afterHome);
+    const awayPitcher = findPitcherCandidate(afterAway, leagueConfig);
+    const homePitcher = findPitcherCandidate(afterHome, leagueConfig);
     const marketLines = [...afterAway, ...afterHome];
     const { spreads, totals } = findPlaySportMarkets(marketLines);
     const spread = spreads.find((item) => item.line.startsWith("+")) || spreads[0];
     const total = totals[0];
-    if (!spread && !total) continue;
+    if (!spread && !total && !awayPitcher && !homePitcher) continue;
 
     const spreadSide = spread ? (spread.side === "客" ? away : home) : "";
     odds.push(
@@ -242,7 +263,7 @@ function parsePlaySportPage(html, leagueConfig, date) {
         source: "玩運彩",
         totalLine: extractLineValue(total?.line),
         spreadTeam: spreadSide,
-        spreadLine: Math.abs(extractLineValue(spread?.line) || 0),
+        spreadLine: spread ? Math.abs(extractLineValue(spread.line) || 0) : null,
         awayPitcher,
         homePitcher,
         updatedAt: new Date().toISOString()
