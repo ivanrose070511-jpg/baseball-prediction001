@@ -1,5 +1,5 @@
 window.SCORE_PREDICTIONS = {
-  "generatedAt": "2026-06-16T18:51:07.319Z",
+  "generatedAt": "2026-06-16T19:45:13.147Z",
   "summary": "已抓取官方賽程：今日 9 場、過去 76 場、未來 77 場。",
   "scheduleSources": {
     "successfulSources": 45,
@@ -8,6 +8,12 @@ window.SCORE_PREDICTIONS = {
   "oddsSources": {
     "count": 0,
     "errors": []
+  },
+  "aiSources": {
+    "enabled": false,
+    "model": "",
+    "error": "OPENAI_API_KEY not set",
+    "count": 0
   },
   "views": {
     "today": [
@@ -30,7 +36,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -42,7 +47,10 @@ window.SCORE_PREDICTIONS = {
           "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-kbo-2",
@@ -63,7 +71,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 58,
         "factors": [
           "官方賽程",
           "大小分",
@@ -75,7 +82,10 @@ window.SCORE_PREDICTIONS = {
           "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-kbo-3",
@@ -96,7 +106,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -108,7 +117,10 @@ window.SCORE_PREDICTIONS = {
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-kbo-4",
@@ -129,7 +141,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 61,
         "factors": [
           "官方賽程",
           "大小分",
@@ -141,7 +152,10 @@ window.SCORE_PREDICTIONS = {
           "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-kbo-5",
@@ -162,7 +176,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -174,7 +187,10 @@ window.SCORE_PREDICTIONS = {
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-npb-1",
@@ -195,7 +211,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -207,7 +222,10 @@ window.SCORE_PREDICTIONS = {
           "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-npb-2",
@@ -228,7 +246,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -240,7 +257,10 @@ window.SCORE_PREDICTIONS = {
           "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-cpbl-1",
@@ -261,7 +281,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -273,7 +292,10 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       },
       {
         "id": "2026-06-17-cpbl-2",
@@ -294,7 +316,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 65,
         "factors": [
           "官方賽程",
           "大小分",
@@ -306,7 +327,10 @@ window.SCORE_PREDICTIONS = {
           "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "aiPredictionSource": "未啟用 AI",
+        "aiBetRecommendation": "未取得",
+        "aiRationale": []
       }
     ],
     "past": [
@@ -331,7 +355,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 66,
         "factors": [
           "官方賽程",
           "大小分",
@@ -364,7 +387,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 72,
         "factors": [
           "官方賽程",
           "大小分",
@@ -399,7 +421,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 74,
         "factors": [
           "官方賽程",
           "大小分",
@@ -434,7 +455,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 61,
         "factors": [
           "官方賽程",
           "大小分",
@@ -469,7 +489,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -504,7 +523,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -539,7 +557,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 66,
         "factors": [
           "官方賽程",
           "大小分",
@@ -574,7 +591,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 65,
         "factors": [
           "官方賽程",
           "大小分",
@@ -609,7 +625,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -644,7 +659,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -677,7 +691,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 66,
         "factors": [
           "官方賽程",
           "大小分",
@@ -712,7 +725,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 72,
         "factors": [
           "官方賽程",
           "大小分",
@@ -747,7 +759,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 68,
         "factors": [
           "官方賽程",
           "大小分",
@@ -782,7 +793,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -817,7 +827,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 58,
         "factors": [
           "官方賽程",
           "大小分",
@@ -852,7 +861,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 72,
         "factors": [
           "官方賽程",
           "大小分",
@@ -887,7 +895,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -922,7 +929,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 68,
         "factors": [
           "官方賽程",
           "大小分",
@@ -957,7 +963,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 58,
         "factors": [
           "官方賽程",
           "大小分",
@@ -992,7 +997,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 75,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1027,7 +1031,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1062,7 +1065,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1097,7 +1099,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1132,7 +1133,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 64,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1167,7 +1167,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 65,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1202,7 +1201,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1237,7 +1235,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 61,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1272,7 +1269,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 66,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1307,7 +1303,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 69,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1342,7 +1337,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 61,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1377,7 +1371,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1412,7 +1405,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1447,7 +1439,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 64,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1482,7 +1473,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1517,7 +1507,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 68,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1552,7 +1541,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1585,7 +1573,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 73,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1618,7 +1605,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1653,7 +1639,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 58,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1688,7 +1673,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 72,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1723,7 +1707,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 61,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1758,7 +1741,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1793,7 +1775,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1828,7 +1809,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 75,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1863,7 +1843,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1898,7 +1877,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 69,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1933,7 +1911,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 68,
         "factors": [
           "官方賽程",
           "大小分",
@@ -1968,7 +1945,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2003,7 +1979,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 65,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2038,7 +2013,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2073,7 +2047,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 66,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2108,7 +2081,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2141,7 +2113,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2176,7 +2147,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 75,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2211,7 +2181,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 73,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2246,7 +2215,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 74,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2281,7 +2249,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2316,7 +2283,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 75,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2351,7 +2317,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 63,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2386,7 +2351,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 67,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2421,7 +2385,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2456,7 +2419,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2491,7 +2453,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2526,7 +2487,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 64,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2559,7 +2519,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 62,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2594,7 +2553,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2629,7 +2587,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2664,7 +2621,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 71,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2699,7 +2655,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 69,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2734,7 +2689,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 68,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2769,7 +2723,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 60,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2804,7 +2757,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 74,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2839,7 +2791,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 67,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2874,7 +2825,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 70,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2909,7 +2859,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 64,
         "factors": [
           "官方賽程",
           "大小分",
@@ -2944,7 +2893,6 @@ window.SCORE_PREDICTIONS = {
         "spreadLine": null,
         "spreadPick": "未取得",
         "oddsSource": "未取得盤口",
-        "confidence": 59,
         "factors": [
           "官方賽程",
           "大小分",
@@ -3906,7 +3854,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 63,
       "factors": [
         "官方賽程",
         "大小分",
@@ -3918,7 +3865,10 @@ window.SCORE_PREDICTIONS = {
         "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-kbo-2",
@@ -3939,7 +3889,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 58,
       "factors": [
         "官方賽程",
         "大小分",
@@ -3951,7 +3900,10 @@ window.SCORE_PREDICTIONS = {
         "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-kbo-3",
@@ -3972,7 +3924,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 60,
       "factors": [
         "官方賽程",
         "大小分",
@@ -3984,7 +3935,10 @@ window.SCORE_PREDICTIONS = {
         "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-kbo-4",
@@ -4005,7 +3959,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 61,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4017,7 +3970,10 @@ window.SCORE_PREDICTIONS = {
         "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-kbo-5",
@@ -4038,7 +3994,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 63,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4050,7 +4005,10 @@ window.SCORE_PREDICTIONS = {
         "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-npb-1",
@@ -4071,7 +4029,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 62,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4083,7 +4040,10 @@ window.SCORE_PREDICTIONS = {
         "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-npb-2",
@@ -4104,7 +4064,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 59,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4116,7 +4075,10 @@ window.SCORE_PREDICTIONS = {
         "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-cpbl-1",
@@ -4137,7 +4099,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 59,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4149,7 +4110,10 @@ window.SCORE_PREDICTIONS = {
         "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     },
     {
       "id": "2026-06-17-cpbl-2",
@@ -4170,7 +4134,6 @@ window.SCORE_PREDICTIONS = {
       "spreadLine": null,
       "spreadPick": "未取得",
       "oddsSource": "未取得盤口",
-      "confidence": 65,
       "factors": [
         "官方賽程",
         "大小分",
@@ -4182,7 +4145,10 @@ window.SCORE_PREDICTIONS = {
         "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
-      ]
+      ],
+      "aiPredictionSource": "未啟用 AI",
+      "aiBetRecommendation": "未取得",
+      "aiRationale": []
     }
   ]
 };

@@ -550,6 +550,63 @@ input[type="range"] {
   background: #f8fbf8;
 }
 
+.ai-block {
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(23, 79, 63, 0.28);
+  border-radius: 8px;
+  padding: 14px;
+  background: #f4faf8;
+}
+
+.ai-block__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--field-deep);
+  font-weight: 900;
+}
+
+.ai-picks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ai-picks div {
+  border-radius: 8px;
+  padding: 9px;
+  background: white;
+}
+
+.ai-picks span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.ai-picks strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--field-deep);
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.ai-block ul,
+.ai-block p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.ai-block ul {
+  display: grid;
+  gap: 6px;
+  padding-left: 18px;
+}
+
 .analysis-block > span {
   display: block;
   color: var(--field-deep);

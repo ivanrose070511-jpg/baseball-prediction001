@@ -346,7 +346,6 @@ export function addPredictionFields(game) {
     spreadLine: null,
     spreadPick: "未取得",
     oddsSource: "未取得盤口",
-    confidence: 58 + seededScore(game, 0, 17, "confidence"),
     factors: ["官方賽程", "大小分", "讓分盤"],
     note: `${game.source} 抓取賽程；模型只判斷大小分與讓分過盤方向。`
   };

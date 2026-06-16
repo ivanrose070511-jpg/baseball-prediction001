@@ -8,6 +8,7 @@ import {
   getTaipeiDateKey
 } from "./fetch-schedules.mjs";
 import { applyOddsToPredictions, fetchOdds } from "./fetch-odds.mjs";
+import { applyAiPredictions } from "./ai-predict.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -65,7 +66,6 @@ function buildPrediction(sportConfig, gameIndex, random) {
   startTime.setHours(startHour, gameIndex % 2 === 0 ? 5 : 35, 0, 0);
 
   const factors = pickMany(sportConfig.factors, random, 3);
-  const confidence = Math.round(52 + random() * 24);
 
   return {
     id: `${dateKey}-${slugify(sportConfig.league)}-${gameIndex + 1}`,
@@ -82,7 +82,6 @@ function buildPrediction(sportConfig, gameIndex, random) {
     spreadLine: null,
     spreadPick: "未取得",
     oddsSource: "未取得盤口",
-    confidence,
     venue: "Daily forecast board",
     factors,
     note: "離線模型依隊伍池、賽事類型與日期種子產生盤口方向；接上真實賽程後可由每日任務覆寫。"
@@ -190,6 +189,8 @@ todayPredictions = applyOddsToPredictions(todayPredictions, oddsResult.odds);
 pastPredictions = applyOddsToPredictions(pastPredictions, oddsResult.odds);
 todayPredictions = attachAnalysis(todayPredictions, recentStats);
 pastPredictions = attachAnalysis(pastPredictions, recentStats);
+const aiResult = await applyAiPredictions(todayPredictions);
+todayPredictions = aiResult.games;
 let predictions = todayPredictions;
 let summary = `已抓取官方賽程：今日 ${todayPredictions.length} 場、過去 ${pastPredictions.length} 場、未來 ${futureSchedules.length} 場。`;
 
@@ -204,6 +205,9 @@ if (totalSuccessfulSources === 0) {
   );
   predictions = applyOddsToPredictions(predictions, oddsResult.odds);
   predictions = attachAnalysis(predictions, recentStats);
+  const fallbackAiResult = await applyAiPredictions(predictions);
+  predictions = fallbackAiResult.games;
+  aiResult.meta = fallbackAiResult.meta;
   todayPredictions = predictions;
   pastPredictions = [];
   futureSchedules = [];
@@ -221,6 +225,7 @@ const payload = {
     count: oddsResult.odds.length,
     errors: oddsResult.errors
   },
+  aiSources: aiResult.meta,
   views: {
     today: todayPredictions,
     past: pastPredictions,

@@ -106,11 +106,14 @@ npm run deploy
 
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
+- `OPENAI_API_KEY`
 
 `.github/workflows/update-and-deploy.yml` 已設定雲端排程：
 
-- 台灣時間平日 14:00：更新今日盤口分析並部署
-- 台灣時間假日 11:00：更新今日盤口分析並部署
+- 台灣時間平日 14:00：更新今日 AI 預測、盤口分析並部署
+- 台灣時間假日 11:00：更新今日 AI 預測、盤口分析並部署
 - 台灣時間每天 22:30：更新比賽結果並部署
 
 GitHub Actions 的 `schedule` 使用 UTC，因此 workflow 內已換算成 UTC 時間。
+
+若要指定 OpenAI 模型，可在 `Settings > Secrets and variables > Actions > Variables` 新增 `OPENAI_MODEL`，預設使用 `gpt-4o-mini`。

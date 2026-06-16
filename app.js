@@ -70,6 +70,11 @@ function formatTotal(game) {
   return `${game.totalPick || "未取得"}${line}`;
 }
 
+function getAiConfidence(game) {
+  const value = Number(game.aiConfidence);
+  return Number.isFinite(value) ? value : null;
+}
+
 function renderAnalysisItems(game) {
   const items = Array.isArray(game.analysisItems) ? game.analysisItems.filter(Boolean) : [];
   if (items.length === 0) return "";
@@ -79,6 +84,51 @@ function renderAnalysisItems(game) {
       <ul>
         ${items.map((item) => `<li>${item}</li>`).join("")}
       </ul>
+    </div>
+  `;
+}
+
+function renderAiPrediction(game) {
+  const aiConfidence = getAiConfidence(game);
+  const hasAiScore =
+    Number.isFinite(Number(game.aiPredictedAwayScore)) && Number.isFinite(Number(game.aiPredictedHomeScore));
+  if (game.aiPredictionSource === "未啟用 AI" || (!hasAiScore && aiConfidence === null)) return "";
+  const score =
+    hasAiScore
+      ? `${game.awayTeam} ${game.aiPredictedAwayScore} : ${game.aiPredictedHomeScore} ${game.homeTeam}`
+      : "未取得";
+  const reasons = Array.isArray(game.aiRationale) ? game.aiRationale.filter(Boolean) : [];
+
+  return `
+    <div class="ai-block" aria-label="AI 智能預測">
+      <div class="ai-block__top">
+        <span>AI 智能預測</span>
+        <strong>${aiConfidence ?? "--"}%</strong>
+      </div>
+      <div class="ai-picks">
+        <div>
+          <span>預測比分</span>
+          <strong>${score}</strong>
+        </div>
+        <div>
+          <span>建議下注</span>
+          <strong>${game.aiBetRecommendation || "觀望"}</strong>
+        </div>
+        <div>
+          <span>大小分</span>
+          <strong>${game.aiTotalPick || game.totalPick || "未取得"}</strong>
+        </div>
+        <div>
+          <span>讓分</span>
+          <strong>${game.aiSpreadPick || game.spreadPick || "未取得"}</strong>
+        </div>
+      </div>
+      ${
+        reasons.length
+          ? `<ul>${reasons.map((item) => `<li>${item}</li>`).join("")}</ul>`
+          : ""
+      }
+      ${game.aiRiskNote ? `<p>${game.aiRiskNote}</p>` : ""}
     </div>
   `;
 }
@@ -116,13 +166,7 @@ function createPredictionCard(game, options = {}) {
         <strong>${game.oddsSource || "未取得盤口"}</strong>
       </div>
     </div>
-    <div>
-      <div class="confidence-row">
-        <span>模型信心</span>
-        <span>${game.confidence ?? 0}%</span>
-      </div>
-      <div class="bar" aria-hidden="true"><span style="width: ${game.confidence ?? 0}%"></span></div>
-    </div>
+    ${renderAiPrediction(game)}
     ${renderAnalysisItems(game)}
     <p class="note">${game.note || game.source || ""}</p>
   `;
@@ -181,18 +225,18 @@ function filtered(viewName) {
   const minimumConfidence = Number(confidenceFilter.value);
   return views[viewName].filter((game) => {
     const matchesLeague = league === "all" || game.league === league;
-    const confidence = viewName === "future" ? 100 : Number(game.confidence || 0);
+    const confidence = viewName === "future" ? 100 : getAiConfidence(game) ?? 0;
     return matchesLeague && confidence >= minimumConfidence;
   });
 }
 
 function updateInsights(items) {
-  const predicted = items.filter((item) => Number.isFinite(Number(item.confidence)));
+  const predicted = items.filter((item) => getAiConfidence(item) !== null);
   const average =
     predicted.length === 0
       ? 0
-      : Math.round(predicted.reduce((sum, item) => sum + Number(item.confidence || 0), 0) / predicted.length);
-  const highest = predicted.reduce(
+      : Math.round(predicted.reduce((sum, item) => sum + getAiConfidence(item), 0) / predicted.length);
+  const highest = items.reduce(
     (best, item) => {
       if (!item.totalPick || item.totalPick === "未取得") return best;
       const next = { ...best, [item.totalPick]: (best[item.totalPick] || 0) + 1 };
