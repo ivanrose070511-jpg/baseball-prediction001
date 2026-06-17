@@ -1,5 +1,5 @@
 window.SCORE_PREDICTIONS = {
-  "generatedAt": "2026-06-17T04:07:18.831Z",
+  "generatedAt": "2026-06-17T14:26:43.969Z",
   "summary": "已抓取官方賽程：今日 8 場、過去 76 場、未來 77 場。",
   "scheduleSources": {
     "successfulSources": 45,
@@ -25,16 +25,18 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "KT巫師",
         "homeTeam": "斗山熊",
         "venue": "잠실",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 8,
+        "actualHomeScore": 1,
         "source": "KBO 官方賽程",
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 15,
         "modelHomeEdge": -3,
         "totalLine": 8.5,
         "totalPick": "大分過盤",
-        "spreadTeam": "斗山熊",
+        "spreadTeam": "KT巫師",
         "spreadLine": 1.5,
-        "spreadPick": "KT巫師 讓分 -1.5 過盤",
+        "spreadPick": "KT巫師 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -43,18 +45,21 @@ window.SCORE_PREDICTIONS = {
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
         "totalConfidence": 76,
-        "spreadConfidence": 61,
-        "betConfidence": 76,
+        "spreadConfidence": 80,
+        "betConfidence": 80,
         "confidenceSource": "盤口模型",
         "awayPitcher": "Matt Sauer",
         "homePitcher": "高田琢登",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.979Z",
         "analysisItems": [
           "先發投手：Matt Sauer vs 高田琢登",
           "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
           "大小分盤 8.5，傾向大分",
-          "讓分盤：KT巫師 讓分 -1.5 過盤"
+          "讓分盤：KT巫師 受讓 +1.5 過盤"
         ],
+        "totalResult": "過盤",
+        "spreadResult": "過盤",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -67,7 +72,9 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "培證英雄",
         "homeTeam": "三星獅",
         "venue": "대구",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 0,
+        "actualHomeScore": 1,
         "source": "KBO 官方賽程",
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
@@ -90,13 +97,16 @@ window.SCORE_PREDICTIONS = {
         "confidenceSource": "盤口模型",
         "awayPitcher": "朴俊賢",
         "homePitcher": "崔原態",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
         "analysisItems": [
           "先發投手：朴俊賢 vs 崔原態",
           "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤 11.5，傾向小分",
           "讓分盤：三星獅 讓分 -2.5 過盤"
         ],
+        "totalResult": "過盤",
+        "spreadResult": "未過",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -109,16 +119,18 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "樂天巨人",
         "homeTeam": "SSG登陸者",
         "venue": "문학",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 2,
+        "actualHomeScore": 1,
         "source": "KBO 官方賽程",
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 15,
         "modelHomeEdge": -1,
         "totalLine": 10.5,
         "totalPick": "大分過盤",
-        "spreadTeam": "SSG登陸者",
+        "spreadTeam": "樂天巨人",
         "spreadLine": 1.5,
-        "spreadPick": "SSG登陸者 受讓 +1.5 過盤",
+        "spreadPick": "樂天巨人 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -127,18 +139,21 @@ window.SCORE_PREDICTIONS = {
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
         "totalConfidence": 76,
-        "spreadConfidence": 54,
-        "betConfidence": 76,
+        "spreadConfidence": 68,
+        "betConfidence": 68,
         "confidenceSource": "盤口模型",
         "awayPitcher": "朴世雄",
         "homePitcher": "金鍵宇",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
         "analysisItems": [
           "先發投手：朴世雄 vs 金鍵宇",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
           "大小分盤 10.5，傾向大分",
-          "讓分盤：SSG登陸者 受讓 +1.5 過盤"
+          "讓分盤：樂天巨人 受讓 +1.5 過盤"
         ],
+        "totalResult": "未過",
+        "spreadResult": "過盤",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -151,7 +166,9 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "LG雙子",
         "homeTeam": "起亞虎",
         "venue": "광주",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 4,
+        "actualHomeScore": 5,
         "source": "KBO 官方賽程",
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
@@ -174,13 +191,16 @@ window.SCORE_PREDICTIONS = {
         "confidenceSource": "盤口模型",
         "awayPitcher": "張現植",
         "homePitcher": "奧勒",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
         "analysisItems": [
           "先發投手：張現植 vs 奧勒",
           "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤 10.5，傾向小分",
           "讓分盤：LG雙子 受讓 +1.5 過盤"
         ],
+        "totalResult": "過盤",
+        "spreadResult": "過盤",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -193,16 +213,18 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "韓華鷹",
         "homeTeam": "NC恐龍",
         "venue": "창원",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 4,
+        "actualHomeScore": 5,
         "source": "KBO 官方賽程",
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
         "modelHomeEdge": 3,
         "totalLine": 9.5,
         "totalPick": "小分過盤",
-        "spreadTeam": "NC恐龍",
+        "spreadTeam": "韓華鷹",
         "spreadLine": 1.5,
-        "spreadPick": "NC恐龍 受讓 +1.5 過盤",
+        "spreadPick": "NC恐龍 讓分 -1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -211,18 +233,21 @@ window.SCORE_PREDICTIONS = {
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
         "totalConfidence": 54,
-        "spreadConfidence": 80,
-        "betConfidence": 80,
+        "spreadConfidence": 61,
+        "betConfidence": 61,
         "confidenceSource": "盤口模型",
         "awayPitcher": "柳賢振",
         "homePitcher": "湯普森",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
         "analysisItems": [
           "先發投手：柳賢振 vs 湯普森",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
           "大小分盤 9.5，傾向小分",
-          "讓分盤：NC恐龍 受讓 +1.5 過盤"
+          "讓分盤：NC恐龍 讓分 -1.5 過盤"
         ],
+        "totalResult": "過盤",
+        "spreadResult": "未過",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -254,17 +279,19 @@ window.SCORE_PREDICTIONS = {
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
         "totalConfidence": 75,
         "spreadConfidence": 68,
-        "betConfidence": 75,
+        "betConfidence": 68,
         "confidenceSource": "盤口模型",
         "awayPitcher": "大竹耕太郎",
         "homePitcher": "前田健太",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.201Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:48.011Z",
         "analysisItems": [
           "先發投手：大竹耕太郎 vs 前田健太",
           "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
           "大小分盤 6.5，傾向小分",
           "讓分盤：樂天金鷲 受讓 +1.5 過盤"
         ],
+        "totalResult": "",
+        "spreadResult": "",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -277,16 +304,18 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "樂天桃猿",
         "homeTeam": "台鋼雄鷹",
         "venue": "澄清湖",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 9,
+        "actualHomeScore": 7,
         "source": "CPBL 官方賽程",
         "sourceUrl": "https://www.cpbl.com.tw/schedule",
         "modelTotal": 8,
         "modelHomeEdge": 4,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 7.5,
+        "totalPick": "大分過盤",
+        "spreadTeam": "樂天桃猿",
+        "spreadLine": 1.5,
+        "spreadPick": "台鋼雄鷹 讓分 -1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -294,19 +323,22 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-        "totalConfidence": null,
-        "spreadConfidence": null,
-        "betConfidence": null,
-        "confidenceSource": "",
+        "totalConfidence": 54,
+        "spreadConfidence": 68,
+        "betConfidence": 68,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "曾家輝",
         "homePitcher": "江承諺",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.946Z",
         "analysisItems": [
           "先發投手：曾家輝 vs 江承諺",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 7.5，傾向大分",
+          "讓分盤：台鋼雄鷹 讓分 -1.5 過盤"
         ],
+        "totalResult": "過盤",
+        "spreadResult": "未過",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -319,16 +351,18 @@ window.SCORE_PREDICTIONS = {
         "awayTeam": "富邦悍將",
         "homeTeam": "味全龍",
         "venue": "天母",
-        "status": "scheduled",
+        "status": "final",
+        "actualAwayScore": 1,
+        "actualHomeScore": 3,
         "source": "CPBL 官方賽程",
         "sourceUrl": "https://www.cpbl.com.tw/schedule",
         "modelTotal": 10,
         "modelHomeEdge": -2,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 6.5,
+        "totalPick": "大分過盤",
+        "spreadTeam": "富邦悍將",
+        "spreadLine": 1.5,
+        "spreadPick": "富邦悍將 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -336,19 +370,22 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-        "totalConfidence": null,
-        "spreadConfidence": null,
-        "betConfidence": null,
-        "confidenceSource": "",
+        "totalConfidence": 75,
+        "spreadConfidence": 75,
+        "betConfidence": 75,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "阿部雄大",
         "homePitcher": "梅賽鍶",
-        "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
+        "oddsUpdatedAt": "2026-06-17T14:26:47.948Z",
         "analysisItems": [
           "先發投手：阿部雄大 vs 梅賽鍶",
           "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 6.5，傾向大分",
+          "讓分盤：富邦悍將 受讓 +1.5 過盤"
         ],
+        "totalResult": "未過",
+        "spreadResult": "未過",
+        "settledAt": "2026-06-17T14:26:48.027Z",
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
         "aiRationale": []
@@ -391,7 +428,9 @@ window.SCORE_PREDICTIONS = {
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-cpbl-2",
@@ -427,7 +466,9 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-kbo-1",
@@ -465,7 +506,9 @@ window.SCORE_PREDICTIONS = {
           "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-kbo-2",
@@ -503,7 +546,9 @@ window.SCORE_PREDICTIONS = {
           "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-kbo-3",
@@ -541,7 +586,9 @@ window.SCORE_PREDICTIONS = {
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-kbo-4",
@@ -579,7 +626,9 @@ window.SCORE_PREDICTIONS = {
           "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-kbo-5",
@@ -617,7 +666,9 @@ window.SCORE_PREDICTIONS = {
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-npb-1",
@@ -655,7 +706,9 @@ window.SCORE_PREDICTIONS = {
           "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；西武獅 近7日 5勝1敗，場均得2.5、失1.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-16-npb-2",
@@ -693,7 +746,9 @@ window.SCORE_PREDICTIONS = {
           "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-cpbl-2",
@@ -731,7 +786,9 @@ window.SCORE_PREDICTIONS = {
           "台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-cpbl-3",
@@ -767,7 +824,9 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；中信兄弟 近7日 0勝2敗，場均得4.3、失6.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-cpbl-1",
@@ -805,7 +864,9 @@ window.SCORE_PREDICTIONS = {
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-kbo-2",
@@ -843,7 +904,9 @@ window.SCORE_PREDICTIONS = {
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-kbo-3",
@@ -881,7 +944,9 @@ window.SCORE_PREDICTIONS = {
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-kbo-4",
@@ -919,7 +984,9 @@ window.SCORE_PREDICTIONS = {
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-kbo-1",
@@ -957,7 +1024,9 @@ window.SCORE_PREDICTIONS = {
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-4",
@@ -995,7 +1064,9 @@ window.SCORE_PREDICTIONS = {
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-1",
@@ -1033,7 +1104,9 @@ window.SCORE_PREDICTIONS = {
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-2",
@@ -1071,7 +1144,9 @@ window.SCORE_PREDICTIONS = {
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-3",
@@ -1109,7 +1184,9 @@ window.SCORE_PREDICTIONS = {
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-5",
@@ -1147,7 +1224,9 @@ window.SCORE_PREDICTIONS = {
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-14-npb-6",
@@ -1185,7 +1264,9 @@ window.SCORE_PREDICTIONS = {
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-cpbl-1",
@@ -1223,7 +1304,9 @@ window.SCORE_PREDICTIONS = {
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-cpbl-2",
@@ -1261,7 +1344,9 @@ window.SCORE_PREDICTIONS = {
           "台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-cpbl-3",
@@ -1299,7 +1384,9 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；中信兄弟 近7日 0勝2敗，場均得4.3、失6.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-3",
@@ -1337,7 +1424,9 @@ window.SCORE_PREDICTIONS = {
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-kbo-1",
@@ -1375,7 +1464,9 @@ window.SCORE_PREDICTIONS = {
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-kbo-2",
@@ -1413,7 +1504,9 @@ window.SCORE_PREDICTIONS = {
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-kbo-3",
@@ -1451,7 +1544,9 @@ window.SCORE_PREDICTIONS = {
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-kbo-4",
@@ -1489,7 +1584,9 @@ window.SCORE_PREDICTIONS = {
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-kbo-5",
@@ -1527,7 +1624,9 @@ window.SCORE_PREDICTIONS = {
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-5",
@@ -1565,7 +1664,9 @@ window.SCORE_PREDICTIONS = {
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-1",
@@ -1603,7 +1704,9 @@ window.SCORE_PREDICTIONS = {
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-2",
@@ -1641,7 +1744,9 @@ window.SCORE_PREDICTIONS = {
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-4",
@@ -1679,7 +1784,9 @@ window.SCORE_PREDICTIONS = {
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-13-npb-6",
@@ -1717,7 +1824,9 @@ window.SCORE_PREDICTIONS = {
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-cpbl-1",
@@ -1753,7 +1862,9 @@ window.SCORE_PREDICTIONS = {
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-cpbl-2",
@@ -1789,7 +1900,9 @@ window.SCORE_PREDICTIONS = {
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-cpbl-3",
@@ -1827,7 +1940,9 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-kbo-1",
@@ -1865,7 +1980,9 @@ window.SCORE_PREDICTIONS = {
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-kbo-2",
@@ -1903,7 +2020,9 @@ window.SCORE_PREDICTIONS = {
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-kbo-3",
@@ -1941,7 +2060,9 @@ window.SCORE_PREDICTIONS = {
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-kbo-4",
@@ -1979,7 +2100,9 @@ window.SCORE_PREDICTIONS = {
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-kbo-5",
@@ -2017,7 +2140,9 @@ window.SCORE_PREDICTIONS = {
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-1",
@@ -2055,7 +2180,9 @@ window.SCORE_PREDICTIONS = {
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-2",
@@ -2093,7 +2220,9 @@ window.SCORE_PREDICTIONS = {
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-3",
@@ -2131,7 +2260,9 @@ window.SCORE_PREDICTIONS = {
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-4",
@@ -2169,7 +2300,9 @@ window.SCORE_PREDICTIONS = {
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-5",
@@ -2207,7 +2340,9 @@ window.SCORE_PREDICTIONS = {
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-12-npb-6",
@@ -2245,7 +2380,9 @@ window.SCORE_PREDICTIONS = {
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-cpbl-1",
@@ -2283,7 +2420,9 @@ window.SCORE_PREDICTIONS = {
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-cpbl-2",
@@ -2321,7 +2460,9 @@ window.SCORE_PREDICTIONS = {
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-cpbl-3",
@@ -2357,7 +2498,9 @@ window.SCORE_PREDICTIONS = {
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-kbo-1",
@@ -2395,7 +2538,9 @@ window.SCORE_PREDICTIONS = {
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-kbo-2",
@@ -2433,7 +2578,9 @@ window.SCORE_PREDICTIONS = {
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；樂天巨人 近7日 3勝3敗，場均得6.7、失5.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-kbo-3",
@@ -2471,7 +2618,9 @@ window.SCORE_PREDICTIONS = {
           "三星獅 近7日 4勝2敗，場均得5.8、失4.2；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-kbo-4",
@@ -2509,7 +2658,9 @@ window.SCORE_PREDICTIONS = {
           "起亞虎 近7日 1勝5敗，場均得1.8、失5.0；韓華鷹 近7日 2勝4敗，場均得3.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-kbo-5",
@@ -2547,7 +2698,9 @@ window.SCORE_PREDICTIONS = {
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-1",
@@ -2585,7 +2738,9 @@ window.SCORE_PREDICTIONS = {
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-2",
@@ -2623,7 +2778,9 @@ window.SCORE_PREDICTIONS = {
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-3",
@@ -2661,7 +2818,9 @@ window.SCORE_PREDICTIONS = {
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-4",
@@ -2699,7 +2858,9 @@ window.SCORE_PREDICTIONS = {
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-5",
@@ -2737,7 +2898,9 @@ window.SCORE_PREDICTIONS = {
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-11-npb-6",
@@ -2775,7 +2938,9 @@ window.SCORE_PREDICTIONS = {
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-cpbl-1",
@@ -2811,7 +2976,9 @@ window.SCORE_PREDICTIONS = {
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-kbo-1",
@@ -2849,7 +3016,9 @@ window.SCORE_PREDICTIONS = {
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-kbo-2",
@@ -2887,7 +3056,9 @@ window.SCORE_PREDICTIONS = {
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；樂天巨人 近7日 3勝3敗，場均得6.7、失5.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-kbo-3",
@@ -2925,7 +3096,9 @@ window.SCORE_PREDICTIONS = {
           "三星獅 近7日 4勝2敗，場均得5.8、失4.2；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-kbo-4",
@@ -2963,7 +3136,9 @@ window.SCORE_PREDICTIONS = {
           "起亞虎 近7日 1勝5敗，場均得1.8、失5.0；韓華鷹 近7日 2勝4敗，場均得3.3、失3.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-kbo-5",
@@ -3001,7 +3176,9 @@ window.SCORE_PREDICTIONS = {
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-1",
@@ -3039,7 +3216,9 @@ window.SCORE_PREDICTIONS = {
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-2",
@@ -3077,7 +3256,9 @@ window.SCORE_PREDICTIONS = {
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-3",
@@ -3115,7 +3296,9 @@ window.SCORE_PREDICTIONS = {
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-4",
@@ -3153,7 +3336,9 @@ window.SCORE_PREDICTIONS = {
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-5",
@@ -3191,7 +3376,9 @@ window.SCORE_PREDICTIONS = {
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       },
       {
         "id": "2026-06-10-npb-6",
@@ -3229,7 +3416,9 @@ window.SCORE_PREDICTIONS = {
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
-        ]
+        ],
+        "totalResult": "",
+        "spreadResult": ""
       }
     ],
     "future": [
@@ -4168,16 +4357,18 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "KT巫師",
       "homeTeam": "斗山熊",
       "venue": "잠실",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 8,
+      "actualHomeScore": 1,
       "source": "KBO 官方賽程",
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 15,
       "modelHomeEdge": -3,
       "totalLine": 8.5,
       "totalPick": "大分過盤",
-      "spreadTeam": "斗山熊",
+      "spreadTeam": "KT巫師",
       "spreadLine": 1.5,
-      "spreadPick": "KT巫師 讓分 -1.5 過盤",
+      "spreadPick": "KT巫師 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4186,18 +4377,21 @@ window.SCORE_PREDICTIONS = {
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
       "totalConfidence": 76,
-      "spreadConfidence": 61,
-      "betConfidence": 76,
+      "spreadConfidence": 80,
+      "betConfidence": 80,
       "confidenceSource": "盤口模型",
       "awayPitcher": "Matt Sauer",
       "homePitcher": "高田琢登",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.979Z",
       "analysisItems": [
         "先發投手：Matt Sauer vs 高田琢登",
         "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
         "大小分盤 8.5，傾向大分",
-        "讓分盤：KT巫師 讓分 -1.5 過盤"
+        "讓分盤：KT巫師 受讓 +1.5 過盤"
       ],
+      "totalResult": "過盤",
+      "spreadResult": "過盤",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4210,7 +4404,9 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "培證英雄",
       "homeTeam": "三星獅",
       "venue": "대구",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 0,
+      "actualHomeScore": 1,
       "source": "KBO 官方賽程",
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
@@ -4233,13 +4429,16 @@ window.SCORE_PREDICTIONS = {
       "confidenceSource": "盤口模型",
       "awayPitcher": "朴俊賢",
       "homePitcher": "崔原態",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
       "analysisItems": [
         "先發投手：朴俊賢 vs 崔原態",
         "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
         "大小分盤 11.5，傾向小分",
         "讓分盤：三星獅 讓分 -2.5 過盤"
       ],
+      "totalResult": "過盤",
+      "spreadResult": "未過",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4252,16 +4451,18 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "樂天巨人",
       "homeTeam": "SSG登陸者",
       "venue": "문학",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 2,
+      "actualHomeScore": 1,
       "source": "KBO 官方賽程",
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 15,
       "modelHomeEdge": -1,
       "totalLine": 10.5,
       "totalPick": "大分過盤",
-      "spreadTeam": "SSG登陸者",
+      "spreadTeam": "樂天巨人",
       "spreadLine": 1.5,
-      "spreadPick": "SSG登陸者 受讓 +1.5 過盤",
+      "spreadPick": "樂天巨人 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4270,18 +4471,21 @@ window.SCORE_PREDICTIONS = {
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
       "totalConfidence": 76,
-      "spreadConfidence": 54,
-      "betConfidence": 76,
+      "spreadConfidence": 68,
+      "betConfidence": 68,
       "confidenceSource": "盤口模型",
       "awayPitcher": "朴世雄",
       "homePitcher": "金鍵宇",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
       "analysisItems": [
         "先發投手：朴世雄 vs 金鍵宇",
         "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
         "大小分盤 10.5，傾向大分",
-        "讓分盤：SSG登陸者 受讓 +1.5 過盤"
+        "讓分盤：樂天巨人 受讓 +1.5 過盤"
       ],
+      "totalResult": "未過",
+      "spreadResult": "過盤",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4294,7 +4498,9 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "LG雙子",
       "homeTeam": "起亞虎",
       "venue": "광주",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 4,
+      "actualHomeScore": 5,
       "source": "KBO 官方賽程",
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
@@ -4317,13 +4523,16 @@ window.SCORE_PREDICTIONS = {
       "confidenceSource": "盤口模型",
       "awayPitcher": "張現植",
       "homePitcher": "奧勒",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
       "analysisItems": [
         "先發投手：張現植 vs 奧勒",
         "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
         "大小分盤 10.5，傾向小分",
         "讓分盤：LG雙子 受讓 +1.5 過盤"
       ],
+      "totalResult": "過盤",
+      "spreadResult": "過盤",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4336,16 +4545,18 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "韓華鷹",
       "homeTeam": "NC恐龍",
       "venue": "창원",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 4,
+      "actualHomeScore": 5,
       "source": "KBO 官方賽程",
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
       "modelHomeEdge": 3,
       "totalLine": 9.5,
       "totalPick": "小分過盤",
-      "spreadTeam": "NC恐龍",
+      "spreadTeam": "韓華鷹",
       "spreadLine": 1.5,
-      "spreadPick": "NC恐龍 受讓 +1.5 過盤",
+      "spreadPick": "NC恐龍 讓分 -1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4354,18 +4565,21 @@ window.SCORE_PREDICTIONS = {
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
       "totalConfidence": 54,
-      "spreadConfidence": 80,
-      "betConfidence": 80,
+      "spreadConfidence": 61,
+      "betConfidence": 61,
       "confidenceSource": "盤口模型",
       "awayPitcher": "柳賢振",
       "homePitcher": "湯普森",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.980Z",
       "analysisItems": [
         "先發投手：柳賢振 vs 湯普森",
         "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
         "大小分盤 9.5，傾向小分",
-        "讓分盤：NC恐龍 受讓 +1.5 過盤"
+        "讓分盤：NC恐龍 讓分 -1.5 過盤"
       ],
+      "totalResult": "過盤",
+      "spreadResult": "未過",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4397,17 +4611,19 @@ window.SCORE_PREDICTIONS = {
       "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
       "totalConfidence": 75,
       "spreadConfidence": 68,
-      "betConfidence": 75,
+      "betConfidence": 68,
       "confidenceSource": "盤口模型",
       "awayPitcher": "大竹耕太郎",
       "homePitcher": "前田健太",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.201Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:48.011Z",
       "analysisItems": [
         "先發投手：大竹耕太郎 vs 前田健太",
         "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
         "大小分盤 6.5，傾向小分",
         "讓分盤：樂天金鷲 受讓 +1.5 過盤"
       ],
+      "totalResult": "",
+      "spreadResult": "",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4420,16 +4636,18 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "樂天桃猿",
       "homeTeam": "台鋼雄鷹",
       "venue": "澄清湖",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 9,
+      "actualHomeScore": 7,
       "source": "CPBL 官方賽程",
       "sourceUrl": "https://www.cpbl.com.tw/schedule",
       "modelTotal": 8,
       "modelHomeEdge": 4,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 7.5,
+      "totalPick": "大分過盤",
+      "spreadTeam": "樂天桃猿",
+      "spreadLine": 1.5,
+      "spreadPick": "台鋼雄鷹 讓分 -1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4437,19 +4655,22 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-      "totalConfidence": null,
-      "spreadConfidence": null,
-      "betConfidence": null,
-      "confidenceSource": "",
+      "totalConfidence": 54,
+      "spreadConfidence": 68,
+      "betConfidence": 68,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "曾家輝",
       "homePitcher": "江承諺",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.946Z",
       "analysisItems": [
         "先發投手：曾家輝 vs 江承諺",
         "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 7.5，傾向大分",
+        "讓分盤：台鋼雄鷹 讓分 -1.5 過盤"
       ],
+      "totalResult": "過盤",
+      "spreadResult": "未過",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []
@@ -4462,16 +4683,18 @@ window.SCORE_PREDICTIONS = {
       "awayTeam": "富邦悍將",
       "homeTeam": "味全龍",
       "venue": "天母",
-      "status": "scheduled",
+      "status": "final",
+      "actualAwayScore": 1,
+      "actualHomeScore": 3,
       "source": "CPBL 官方賽程",
       "sourceUrl": "https://www.cpbl.com.tw/schedule",
       "modelTotal": 10,
       "modelHomeEdge": -2,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 6.5,
+      "totalPick": "大分過盤",
+      "spreadTeam": "富邦悍將",
+      "spreadLine": 1.5,
+      "spreadPick": "富邦悍將 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4479,19 +4702,22 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-      "totalConfidence": null,
-      "spreadConfidence": null,
-      "betConfidence": null,
-      "confidenceSource": "",
+      "totalConfidence": 75,
+      "spreadConfidence": 75,
+      "betConfidence": 75,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "阿部雄大",
       "homePitcher": "梅賽鍶",
-      "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
+      "oddsUpdatedAt": "2026-06-17T14:26:47.948Z",
       "analysisItems": [
         "先發投手：阿部雄大 vs 梅賽鍶",
         "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 6.5，傾向大分",
+        "讓分盤：富邦悍將 受讓 +1.5 過盤"
       ],
+      "totalResult": "未過",
+      "spreadResult": "未過",
+      "settledAt": "2026-06-17T14:26:48.027Z",
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
       "aiRationale": []

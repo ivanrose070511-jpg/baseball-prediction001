@@ -673,6 +673,52 @@ input[type="range"] {
   padding-left: 18px;
 }
 
+.settlement-block {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfaf6;
+}
+
+.settlement-block > span {
+  color: var(--field-deep);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.settlement-block p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.settlement-block strong {
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 0.8rem;
+}
+
+.settlement-block .is-win {
+  background: rgba(23, 79, 63, 0.12);
+  color: var(--field-deep);
+}
+
+.settlement-block .is-loss {
+  background: rgba(216, 95, 79, 0.14);
+  color: #a43e32;
+}
+
+.settlement-block .is-push {
+  background: rgba(218, 139, 42, 0.16);
+  color: #8f5a12;
+}
+
 .analysis-block > span {
   display: block;
   color: var(--field-deep);

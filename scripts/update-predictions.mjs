@@ -183,6 +183,117 @@ function attachAnalysis(games, recentStats) {
   });
 }
 
+function hasPick(value) {
+  return value && value !== "未取得" && !String(value).includes("未取得");
+}
+
+function storedPredictionMap(payload) {
+  const map = new Map();
+  const views = payload?.views || {};
+  for (const game of [...(views.today || []), ...(views.past || [])]) {
+    if (game?.id) map.set(game.id, game);
+  }
+  return map;
+}
+
+function copyFields(target, source, fields) {
+  const next = { ...target };
+  for (const field of fields) {
+    if (source[field] !== undefined && source[field] !== null && source[field] !== "") next[field] = source[field];
+  }
+  return next;
+}
+
+function preserveStoredPredictions(games, existingPayload) {
+  const storedById = storedPredictionMap(existingPayload);
+  return games.map((game) => {
+    const stored = storedById.get(game.id);
+    if (!stored) return game;
+
+    let next = { ...game };
+    if (!hasPick(next.totalPick) && hasPick(stored.totalPick)) {
+      next = copyFields(next, stored, ["totalLine", "totalPick", "totalConfidence"]);
+    }
+    if (!hasPick(next.spreadPick) && hasPick(stored.spreadPick)) {
+      next = copyFields(next, stored, [
+        "spreadTeam",
+        "spreadLine",
+        "spreadPick",
+        "spreadConfidence",
+        "betConfidence",
+        "confidenceSource"
+      ]);
+    }
+    if (!next.oddsUpdatedAt && stored.oddsUpdatedAt) next.oddsUpdatedAt = stored.oddsUpdatedAt;
+    if ((!next.awayPitcher || next.awayPitcher === "未取得") && stored.awayPitcher) next.awayPitcher = stored.awayPitcher;
+    if ((!next.homePitcher || next.homePitcher === "未取得") && stored.homePitcher) next.homePitcher = stored.homePitcher;
+    if (!hasPick(next.aiBetRecommendation) && hasPick(stored.aiBetRecommendation)) {
+      next = copyFields(next, stored, [
+        "aiPredictionSource",
+        "aiPredictedAwayScore",
+        "aiPredictedHomeScore",
+        "aiTotalPick",
+        "aiSpreadPick",
+        "aiBetRecommendation",
+        "aiConfidence",
+        "aiRationale",
+        "aiRiskNote"
+      ]);
+    }
+    return next;
+  });
+}
+
+function gameHasFinalScore(game) {
+  return (
+    game.status === "final" &&
+    Number.isFinite(Number(game.actualAwayScore)) &&
+    Number.isFinite(Number(game.actualHomeScore))
+  );
+}
+
+function evaluateTotalPick(game) {
+  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.totalLine)) || !hasPick(game.totalPick)) return "";
+  const actualTotal = Number(game.actualAwayScore) + Number(game.actualHomeScore);
+  const line = Number(game.totalLine);
+  if (actualTotal === line) return "走水";
+  const actualPick = actualTotal > line ? "大分過盤" : "小分過盤";
+  return game.totalPick === actualPick ? "過盤" : "未過";
+}
+
+function evaluateSpreadPick(game) {
+  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.spreadLine)) || !hasPick(game.spreadPick)) return "";
+  const line = Number(game.spreadLine);
+  const pickText = String(game.spreadPick);
+  const isUnderdogPick = pickText.includes("受讓");
+  const isFavoritePick = pickText.includes("讓分");
+  if (!isUnderdogPick && !isFavoritePick) return "";
+
+  const pickTeam = pickText.split(isUnderdogPick ? "受讓" : "讓分")[0].trim();
+  const isHomePick = pickTeam === game.homeTeam;
+  const isAwayPick = pickTeam === game.awayTeam;
+  if (!isHomePick && !isAwayPick) return "";
+
+  const pickScore = Number(isHomePick ? game.actualHomeScore : game.actualAwayScore);
+  const opponentScore = Number(isHomePick ? game.actualAwayScore : game.actualHomeScore);
+  const adjustedScore = pickScore + (isUnderdogPick ? line : -line);
+  if (adjustedScore === opponentScore) return "走水";
+  return adjustedScore > opponentScore ? "過盤" : "未過";
+}
+
+function attachSettlements(games) {
+  return games.map((game) => {
+    const totalResult = evaluateTotalPick(game);
+    const spreadResult = evaluateSpreadPick(game);
+    return {
+      ...game,
+      totalResult,
+      spreadResult,
+      settledAt: totalResult || spreadResult ? new Date().toISOString() : game.settledAt
+    };
+  });
+}
+
 async function fetchMany(dayOffsets, options) {
   const results = [];
   const errors = [];
@@ -230,8 +341,12 @@ const oddsResult = await fetchOdds();
 const recentStats = buildRecentStats(pastResult.games);
 todayPredictions = applyOddsToPredictions(todayPredictions, oddsResult.odds);
 pastPredictions = applyOddsToPredictions(pastPredictions, oddsResult.odds);
+todayPredictions = preserveStoredPredictions(todayPredictions, existingPayload);
+pastPredictions = preserveStoredPredictions(pastPredictions, existingPayload);
 todayPredictions = attachAnalysis(todayPredictions, recentStats);
 pastPredictions = attachAnalysis(pastPredictions, recentStats);
+todayPredictions = attachSettlements(todayPredictions);
+pastPredictions = attachSettlements(pastPredictions);
 const aiResult = await applyAiPredictions(todayPredictions);
 todayPredictions = aiResult.games;
 let predictions = todayPredictions;

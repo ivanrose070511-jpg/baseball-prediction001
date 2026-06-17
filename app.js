@@ -208,6 +208,36 @@ function renderBetRecommendation(game) {
   `;
 }
 
+function resultClass(result) {
+  if (result === "過盤") return "is-win";
+  if (result === "未過") return "is-loss";
+  if (result === "走水") return "is-push";
+  return "";
+}
+
+function renderSettlement(game) {
+  const rows = [];
+  if (game.spreadResult) rows.push({ label: "讓分結果", value: game.spreadResult });
+  if (game.totalResult) rows.push({ label: "大小分結果", value: game.totalResult });
+  if (!rows.length) return "";
+
+  return `
+    <div class="settlement-block" aria-label="賽果核對">
+      <span>賽果核對</span>
+      ${rows
+        .map(
+          (row) => `
+            <p>
+              ${row.label}
+              <strong class="${resultClass(row.value)}">${row.value}</strong>
+            </p>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function createPredictionCard(game, options = {}) {
   const showActual = Boolean(options.showActual);
   const card = document.createElement("article");
@@ -243,6 +273,7 @@ function createPredictionCard(game, options = {}) {
       </div>
     </div>
     ${renderAiPrediction(game)}
+    ${renderSettlement(game)}
     ${renderAnalysisItems(game)}
     <p class="note">${game.note || game.source || ""}</p>
   `;
@@ -335,6 +366,23 @@ function updateInsights(items) {
   document.querySelector("#top-league").textContent = topLeague;
 }
 
+function updateSettlementRecord() {
+  const results = allGames.flatMap((game) => [game.spreadResult, game.totalResult]).filter(Boolean);
+  const counts = results.reduce(
+    (record, result) => {
+      if (result === "過盤") record.win += 1;
+      if (result === "未過") record.loss += 1;
+      if (result === "走水") record.push += 1;
+      return record;
+    },
+    { win: 0, loss: 0, push: 0 }
+  );
+  const values = document.querySelectorAll(".record-grid strong");
+  if (values[0]) values[0].textContent = counts.win;
+  if (values[1]) values[1].textContent = counts.loss;
+  if (values[2]) values[2].textContent = counts.push;
+}
+
 function renderView(viewName) {
   const items = filtered(viewName);
   const grid = document.querySelector(`#${viewName}-grid`);
@@ -355,6 +403,7 @@ function renderView(viewName) {
 
 function render() {
   confidenceOutput.textContent = `${confidenceFilter.value}%+`;
+  updateSettlementRecord();
   renderView("today");
   renderView("past");
   renderView("future");
