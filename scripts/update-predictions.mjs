@@ -260,6 +260,14 @@ if (totalSuccessfulSources === 0) {
   summary = `官方賽程抓取失敗，已改用示範隊伍池產生 ${predictions.length} 場 ${dateKey} 的盤口預測。`;
 }
 
+if (
+  process.env.REQUIRE_OPENAI === "true" &&
+  todayPredictions.length > 0 &&
+  (!aiResult.meta.enabled || aiResult.meta.count === 0)
+) {
+  throw new Error(`ChatGPT analysis required but not available: ${aiResult.meta.error || "no AI predictions"}`);
+}
+
 const payload = {
   generatedAt: now.toISOString(),
   summary,

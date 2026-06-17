@@ -37,6 +37,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+          REQUIRE_OPENAI: "true"
 
       - name: Build static assets
         run: npm run build
