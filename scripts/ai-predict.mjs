@@ -1,4 +1,4 @@
-const OPENAI_URL = "https://api.openai.com/v1/chat/completions";
+const OPENAI_URL = "https://api.openai.com/v1/responses";
 const DEFAULT_MODEL = "gpt-4o-mini";
 
 const predictionSchema = {
@@ -46,8 +46,8 @@ function compactGame(game) {
     awayTeam: game.awayTeam,
     homeTeam: game.homeTeam,
     venue: game.venue,
-    awayPitcher: game.awayPitcher || "未公開",
-    homePitcher: game.homePitcher || "未公開",
+    awayPitcher: game.awayPitcher || "未取得",
+    homePitcher: game.homePitcher || "未取得",
     totalLine: game.totalLine,
     spreadTeam: game.spreadTeam,
     spreadLine: game.spreadLine,
@@ -58,8 +58,21 @@ function compactGame(game) {
   };
 }
 
+function extractResponseText(data) {
+  if (typeof data.output_text === "string" && data.output_text.trim()) return data.output_text;
+
+  const output = Array.isArray(data.output) ? data.output : [];
+  for (const item of output) {
+    const content = Array.isArray(item.content) ? item.content : [];
+    for (const part of content) {
+      if (typeof part.text === "string" && part.text.trim()) return part.text;
+    }
+  }
+
+  throw new Error("OpenAI returned an empty response");
+}
+
 function extractJson(content) {
-  if (!content) throw new Error("OpenAI returned an empty response");
   return JSON.parse(content);
 }
 
@@ -76,25 +89,34 @@ async function requestAiPredictions(games) {
   const model = process.env.OPENAI_MODEL || DEFAULT_MODEL;
   const body = {
     model,
-    temperature: 0.35,
-    messages: [
+    input: [
       {
         role: "system",
-        content:
-          "你是謹慎的亞洲職棒盤口分析師。根據提供的官方賽程、公開盤口、先發投手與近況資料，產生預測比分與下注方向。不要保證獲利，不要編造未提供的盤口；盤口缺失時可預測比分，但下注建議應偏保守或觀望。所有輸出使用繁體中文。"
+        content: [
+          {
+            type: "input_text",
+            text:
+              "You are a cautious Asian professional baseball betting analyst. Use only the provided official schedule, public betting lines, probable pitchers, recent form notes, and market context. Do not guarantee profit. Do not invent missing odds, pitchers, scores, injuries, or data. If a market line is missing, mark that market as unavailable or recommend waiting. Return every explanation in Traditional Chinese."
+          }
+        ]
       },
       {
         role: "user",
-        content: JSON.stringify({
-          task:
-            "請針對每場比賽輸出預測比分、大小分方向、讓分過盤方向、下注建議、信心分數與理由。若沒有大小分或讓分公開盤口，該盤口方向請填未取得或觀望。",
-          games: games.map(compactGame)
-        })
+        content: [
+          {
+            type: "input_text",
+            text: JSON.stringify({
+              task:
+                "For each game, produce a predicted score, over/under pick, run-line pick, single betting recommendation, confidence score, rationale, and risk note. If totalLine or spreadLine is missing, use 未取得 for that market and keep the recommendation conservative.",
+              games: games.map(compactGame)
+            })
+          }
+        ]
       }
     ],
-    response_format: {
-      type: "json_schema",
-      json_schema: {
+    text: {
+      format: {
+        type: "json_schema",
         name: "baseball_betting_predictions",
         strict: true,
         schema: predictionSchema
@@ -116,8 +138,7 @@ async function requestAiPredictions(games) {
     throw new Error(data.error?.message || `OpenAI API HTTP ${response.status}`);
   }
 
-  const content = data.choices?.[0]?.message?.content;
-  const parsed = extractJson(content);
+  const parsed = extractJson(extractResponseText(data));
   return { enabled: true, predictions: parsed.predictions || [], error: "" };
 }
 
