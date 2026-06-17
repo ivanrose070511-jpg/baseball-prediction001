@@ -59,7 +59,7 @@ const formatFullDateTime = (value) =>
 
 function actualScore(game, side) {
   const score = side === "home" ? game.actualHomeScore : game.actualAwayScore;
-  return Number.isFinite(Number(score)) ? `<span class="actual-score">實際 ${score}</span>` : "";
+  return Number.isFinite(Number(score)) ? `<span class="actual-score">比分 ${score}</span>` : "";
 }
 
 function formatTotal(game) {
@@ -238,8 +238,22 @@ function renderSettlement(game) {
   `;
 }
 
+function renderDetailedAnalysis(game) {
+  if (!game.detailedAnalysis) return "";
+  return `
+    <div class="detailed-analysis" aria-label="重點分析">
+      <span>重點分析</span>
+      <p>${game.detailedAnalysis}</p>
+    </div>
+  `;
+}
+
 function createPredictionCard(game, options = {}) {
-  const showActual = Boolean(options.showActual);
+  const hasFinalScore =
+    game.status === "final" &&
+    Number.isFinite(Number(game.actualAwayScore)) &&
+    Number.isFinite(Number(game.actualHomeScore));
+  const showActual = Boolean(options.showActual || hasFinalScore);
   const card = document.createElement("article");
   card.className = "prediction-card";
   card.innerHTML = `
@@ -258,6 +272,7 @@ function createPredictionCard(game, options = {}) {
       </div>
     </div>
     ${renderBetRecommendation(game)}
+    ${renderDetailedAnalysis(game)}
     <div class="market-grid" aria-label="預測項目">
       <div>
         <span>讓分過盤</span>
@@ -327,12 +342,17 @@ function renderLeagueBoard() {
   leagueBoard.replaceChildren(...cards);
 }
 
-function filtered(viewName) {
+function filtered(viewName, options = {}) {
+  const { featuredOnly = false, ignoreConfidence = false } = options;
   const league = leagueFilter.value;
   const minimumConfidence = Number(confidenceFilter.value);
   return views[viewName].filter((game) => {
     const matchesLeague = league === "all" || game.league === league;
-    const confidence = viewName === "future" ? 100 : getAiConfidence(game) ?? 0;
+    if (!matchesLeague) return false;
+    if (featuredOnly && !game.isFeatured) return false;
+    if (ignoreConfidence) return true;
+    const marketConfidence = Number(game.betConfidence ?? game.totalConfidence ?? game.spreadConfidence ?? 0);
+    const confidence = viewName === "future" ? 100 : getAiConfidence(game) ?? marketConfidence;
     return matchesLeague && confidence >= minimumConfidence;
   });
 }
@@ -384,19 +404,26 @@ function updateSettlementRecord() {
 }
 
 function renderView(viewName) {
-  const items = filtered(viewName);
+  const items = filtered(viewName, { featuredOnly: viewName === "today" });
   const grid = document.querySelector(`#${viewName}-grid`);
   const empty = document.querySelector(`#${viewName}-empty`);
   const status = document.querySelector(`#${viewName}-status`);
   const leagueText = leagueFilter.value === "all" ? "全部聯盟" : leagueFilter.value;
 
-  if (viewName === "future") {
+  if (viewName === "today") {
+    const scheduleItems = filtered("today", { ignoreConfidence: true });
+    const scheduleGrid = document.querySelector("#today-schedule-grid");
+    scheduleGrid.replaceChildren(...scheduleItems.map(createScheduleRow));
+    grid.replaceChildren(...items.map((item) => createPredictionCard(item)));
+    status.textContent = `${leagueText} · 賽程 ${scheduleItems.length} 場 · 精選 ${items.length} 場`;
+  } else if (viewName === "future") {
     grid.replaceChildren(...items.map(createScheduleRow));
+    status.textContent = `${leagueText} · ${items.length} 場`;
   } else {
     grid.replaceChildren(...items.map((item) => createPredictionCard(item, { showActual: viewName === "past" })));
+    status.textContent = `${leagueText} · ${items.length} 場`;
   }
   empty.hidden = items.length > 0;
-  status.textContent = `${leagueText} · ${items.length} 場`;
 
   if (viewName === activeView) updateInsights(items);
 }
@@ -415,14 +442,16 @@ function switchView(viewName) {
   document.querySelectorAll(".view-panel").forEach((panel) => {
     panel.classList.toggle("is-active", panel.dataset.panel === viewName);
   });
-  updateInsights(filtered(viewName));
+  updateInsights(filtered(viewName, { featuredOnly: viewName === "today" }));
 }
 
 function bootstrap() {
   document.querySelector("#hero-summary").textContent =
     data.summary || "每日依照韓職、日職、中職賽程與盤口產生大小分、讓分過盤預測。";
   document.querySelector("#last-updated").textContent = `更新時間 ${formatFullDateTime(data.generatedAt)}`;
-  document.querySelector("#prediction-count").textContent = `${views.today.length} 場今日賽事`;
+  document.querySelector("#prediction-count").textContent = `${
+    views.today.filter((game) => game.isFeatured).length || views.today.length
+  } 場精選預測`;
   document.querySelector("#today-count").textContent = views.today.length;
   document.querySelector("#league-count").textContent = new Set(allGames.map((item) => item.league)).size || 3;
   populateLeagues();

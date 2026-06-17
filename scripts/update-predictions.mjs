@@ -294,6 +294,66 @@ function attachSettlements(games) {
   });
 }
 
+function marketScore(game) {
+  let score = 0;
+  if (Number.isFinite(Number(game.spreadLine)) && hasPick(game.spreadPick)) score += 40;
+  if (Number.isFinite(Number(game.totalLine)) && hasPick(game.totalPick)) score += 35;
+  if (Number.isFinite(Number(game.betConfidence))) score += Number(game.betConfidence) / 2;
+  if (game.awayPitcher || game.homePitcher) score += 8;
+  return score;
+}
+
+function markFeaturedPredictions(games) {
+  const byLeague = new Map();
+  for (const game of games) {
+    const list = byLeague.get(game.league) || [];
+    list.push(game);
+    byLeague.set(game.league, list);
+  }
+
+  const featuredIds = new Set();
+  for (const list of byLeague.values()) {
+    const ranked = [...list].sort((a, b) => {
+      const scoreDiff = marketScore(b) - marketScore(a);
+      if (scoreDiff !== 0) return scoreDiff;
+      return new Date(a.startTime) - new Date(b.startTime);
+    });
+    for (const game of ranked.slice(0, Math.min(3, ranked.length))) featuredIds.add(game.id);
+  }
+
+  return games.map((game) => ({
+    ...game,
+    isFeatured: featuredIds.has(game.id)
+  }));
+}
+
+function shortText(value, maxLength = 120) {
+  const text = String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
+}
+
+function buildDetailedAnalysis(game) {
+  const aiText = Array.isArray(game.aiRationale) ? game.aiRationale.filter(Boolean).join(" ") : "";
+  if (aiText) return shortText(aiText, 130);
+
+  const items = Array.isArray(game.analysisItems) ? game.analysisItems.filter(Boolean) : [];
+  if (items.length) return shortText(items.join("；"), 130);
+
+  return shortText(
+    `${game.awayTeam} 對 ${game.homeTeam}，目前依公開盤口、先發投手與近期得失分整理投注方向；若盤口不足，建議等待更完整資訊。`,
+    130
+  );
+}
+
+function attachDetailedAnalysis(games) {
+  return games.map((game) => ({
+    ...game,
+    detailedAnalysis: game.isFeatured ? buildDetailedAnalysis(game) : game.detailedAnalysis || ""
+  }));
+}
+
 async function fetchMany(dayOffsets, options) {
   const results = [];
   const errors = [];
@@ -347,8 +407,12 @@ todayPredictions = attachAnalysis(todayPredictions, recentStats);
 pastPredictions = attachAnalysis(pastPredictions, recentStats);
 todayPredictions = attachSettlements(todayPredictions);
 pastPredictions = attachSettlements(pastPredictions);
-const aiResult = await applyAiPredictions(todayPredictions);
-todayPredictions = aiResult.games;
+todayPredictions = markFeaturedPredictions(todayPredictions);
+let featuredTodayPredictions = todayPredictions.filter((game) => game.isFeatured);
+const aiResult = await applyAiPredictions(featuredTodayPredictions);
+const aiGamesById = new Map(aiResult.games.map((game) => [game.id, game]));
+todayPredictions = todayPredictions.map((game) => aiGamesById.get(game.id) || game);
+todayPredictions = attachDetailedAnalysis(todayPredictions);
 let predictions = todayPredictions;
 let summary = `已抓取官方賽程：今日 ${todayPredictions.length} 場、過去 ${pastPredictions.length} 場、未來 ${futureSchedules.length} 場。`;
 if (failedLeagues.size > 0) {
@@ -366,8 +430,13 @@ if (totalSuccessfulSources === 0) {
   );
   predictions = applyOddsToPredictions(predictions, oddsResult.odds);
   predictions = attachAnalysis(predictions, recentStats);
-  const fallbackAiResult = await applyAiPredictions(predictions);
-  predictions = fallbackAiResult.games;
+  predictions = markFeaturedPredictions(predictions);
+  const fallbackFeaturedPredictions = predictions.filter((game) => game.isFeatured);
+  const fallbackAiResult = await applyAiPredictions(fallbackFeaturedPredictions);
+  const fallbackAiGamesById = new Map(fallbackAiResult.games.map((game) => [game.id, game]));
+  predictions = predictions.map((game) => fallbackAiGamesById.get(game.id) || game);
+  predictions = attachDetailedAnalysis(predictions);
+  featuredTodayPredictions = fallbackFeaturedPredictions;
   aiResult.meta = fallbackAiResult.meta;
   todayPredictions = predictions;
   pastPredictions = [];
@@ -377,7 +446,7 @@ if (totalSuccessfulSources === 0) {
 
 if (
   process.env.REQUIRE_OPENAI === "true" &&
-  todayPredictions.length > 0 &&
+  featuredTodayPredictions.length > 0 &&
   (!aiResult.meta.enabled || aiResult.meta.count === 0)
 ) {
   throw new Error(`ChatGPT analysis required but not available: ${aiResult.meta.error || "no AI predictions"}`);

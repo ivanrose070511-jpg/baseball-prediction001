@@ -455,6 +455,29 @@ input[type="range"] {
   font-weight: 700;
 }
 
+.today-schedule-block {
+  margin-bottom: 24px;
+}
+
+.subsection-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 18px 0 10px;
+}
+
+.subsection-heading strong {
+  color: var(--field-deep);
+  font-size: 1rem;
+}
+
+.subsection-heading span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
 .prediction-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -614,6 +637,28 @@ input[type="range"] {
   border-radius: 8px;
   padding: 12px;
   background: #f8fbf8;
+}
+
+.detailed-analysis {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(218, 139, 42, 0.34);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fffaf0;
+}
+
+.detailed-analysis span {
+  color: #8f5a12;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.detailed-analysis p {
+  margin: 0;
+  color: #4f5c55;
+  font-weight: 800;
+  line-height: 1.55;
 }
 
 .ai-block {
