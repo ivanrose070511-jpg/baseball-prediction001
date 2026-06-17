@@ -133,6 +133,81 @@ function renderAiPrediction(game) {
   `;
 }
 
+function availablePick(value) {
+  return value && value !== "未取得" && !String(value).includes("未取得");
+}
+
+function formatConfidence(value) {
+  const confidence = Number(value);
+  return Number.isFinite(confidence) ? `${Math.round(confidence)}%` : "--";
+}
+
+function hasChatGptPrediction(game) {
+  return game.aiPredictionSource && game.aiPredictionSource !== "未啟用 AI" && getAiConfidence(game) !== null;
+}
+
+function renderBetRecommendation(game) {
+  if (hasChatGptPrediction(game)) {
+    const aiPicks = [];
+    if (availablePick(game.aiSpreadPick)) aiPicks.push(`讓分：${game.aiSpreadPick}`);
+    if (availablePick(game.aiTotalPick)) aiPicks.push(`大小分：${game.aiTotalPick}`);
+    const recommendation = game.aiBetRecommendation || aiPicks[0] || "觀望";
+
+    return `
+      <div class="bet-recommendation bet-recommendation--ai">
+        <span>建議下注</span>
+        <strong>${recommendation}</strong>
+        <em>ChatGPT 信心 ${formatConfidence(game.aiConfidence)}</em>
+        ${aiPicks.map((pick) => `<p>${pick}</p>`).join("")}
+        <small>信心來源：ChatGPT 智能分析 (${game.aiPredictionSource})</small>
+      </div>
+    `;
+  }
+
+  const picks = [];
+  if (availablePick(game.spreadPick)) {
+    picks.push({
+      label: "讓分",
+      text: game.spreadPick,
+      confidence: game.spreadConfidence
+    });
+  }
+  if (availablePick(game.totalPick)) {
+    const totalLine =
+      game.totalLine !== null && game.totalLine !== undefined && Number.isFinite(Number(game.totalLine))
+        ? ` ${Number(game.totalLine).toFixed(1)}`
+        : "";
+    picks.push({
+      label: "大小分",
+      text: `${game.totalPick}${totalLine}`,
+      confidence: game.totalConfidence
+    });
+  }
+
+  if (!picks.length) {
+    return `
+      <div class="bet-recommendation bet-recommendation--waiting">
+        <span>建議下注</span>
+        <strong>等待盤口</strong>
+        <p>目前還沒抓到大小分或讓分，先不給過盤建議。</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="bet-recommendation">
+      <span>建議下注</span>
+      <strong>${picks[0].label}：${picks[0].text}</strong>
+      <em>過盤信心 ${formatConfidence(picks[0].confidence)}</em>
+      ${picks
+        .slice(1)
+        .map((pick) => `<p>${pick.label}：${pick.text} <b>信心 ${formatConfidence(pick.confidence)}</b></p>`)
+        .join("")}
+      ${game.confidenceSource ? `<small>信心來源：${game.confidenceSource}</small>` : ""}
+    </div>
+  `;
+}
+
 function createPredictionCard(game, options = {}) {
   const showActual = Boolean(options.showActual);
   const card = document.createElement("article");
@@ -152,6 +227,7 @@ function createPredictionCard(game, options = {}) {
         <span class="team-side">主</span>
       </div>
     </div>
+    ${renderBetRecommendation(game)}
     <div class="market-grid" aria-label="預測項目">
       <div>
         <span>讓分過盤</span>

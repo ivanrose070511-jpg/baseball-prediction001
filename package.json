@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "update:data": "node scripts/update-predictions.mjs",
+    "update:odds": "npm run update:data && npm run build",
+    "update:chatgpt": "npm run update:data && npm run build",
     "build": "node scripts/build-static.mjs",
     "deploy": "npm run update:data && npm run build && wrangler deploy",
     "deploy:static": "npm run build && wrangler deploy"

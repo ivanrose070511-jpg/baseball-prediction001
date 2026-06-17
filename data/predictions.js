@@ -1,12 +1,12 @@
 window.SCORE_PREDICTIONS = {
-  "generatedAt": "2026-06-16T20:13:36.168Z",
-  "summary": "已抓取官方賽程：今日 9 場、過去 76 場、未來 77 場。",
+  "generatedAt": "2026-06-17T04:07:18.831Z",
+  "summary": "已抓取官方賽程：今日 8 場、過去 76 場、未來 77 場。",
   "scheduleSources": {
     "successfulSources": 45,
     "errors": []
   },
   "oddsSources": {
-    "count": 6,
+    "count": 8,
     "errors": []
   },
   "aiSources": {
@@ -30,11 +30,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 15,
         "modelHomeEdge": -3,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 8.5,
+        "totalPick": "大分過盤",
+        "spreadTeam": "斗山熊",
+        "spreadLine": 1.5,
+        "spreadPick": "KT巫師 讓分 -1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -42,14 +42,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 76,
+        "spreadConfidence": 61,
+        "betConfidence": 76,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "Matt Sauer",
         "homePitcher": "高田琢登",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.831Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
         "analysisItems": [
           "先發投手：Matt Sauer vs 高田琢登",
           "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 8.5，傾向大分",
+          "讓分盤：KT巫師 讓分 -1.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -68,11 +72,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
         "modelHomeEdge": 5,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 11.5,
+        "totalPick": "小分過盤",
+        "spreadTeam": "培證英雄",
+        "spreadLine": 2.5,
+        "spreadPick": "三星獅 讓分 -2.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -80,14 +84,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 68,
+        "spreadConfidence": 68,
+        "betConfidence": 68,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "朴俊賢",
         "homePitcher": "崔原態",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
         "analysisItems": [
           "先發投手：朴俊賢 vs 崔原態",
           "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 11.5，傾向小分",
+          "讓分盤：三星獅 讓分 -2.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -106,11 +114,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 15,
         "modelHomeEdge": -1,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 10.5,
+        "totalPick": "大分過盤",
+        "spreadTeam": "SSG登陸者",
+        "spreadLine": 1.5,
+        "spreadPick": "SSG登陸者 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -118,14 +126,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 76,
+        "spreadConfidence": 54,
+        "betConfidence": 76,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "朴世雄",
         "homePitcher": "金鍵宇",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
         "analysisItems": [
           "先發投手：朴世雄 vs 金鍵宇",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 10.5，傾向大分",
+          "讓分盤：SSG登陸者 受讓 +1.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -144,11 +156,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
         "modelHomeEdge": -1,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 10.5,
+        "totalPick": "小分過盤",
+        "spreadTeam": "LG雙子",
+        "spreadLine": 1.5,
+        "spreadPick": "LG雙子 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -156,14 +168,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 61,
+        "spreadConfidence": 68,
+        "betConfidence": 68,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "張現植",
         "homePitcher": "奧勒",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
         "analysisItems": [
           "先發投手：張現植 vs 奧勒",
           "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 10.5，傾向小分",
+          "讓分盤：LG雙子 受讓 +1.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -182,11 +198,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
         "modelTotal": 9,
         "modelHomeEdge": 3,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 9.5,
+        "totalPick": "小分過盤",
+        "spreadTeam": "NC恐龍",
+        "spreadLine": 1.5,
+        "spreadPick": "NC恐龍 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -194,14 +210,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 54,
+        "spreadConfidence": 80,
+        "betConfidence": 80,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "柳賢振",
         "homePitcher": "湯普森",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
         "analysisItems": [
           "先發投手：柳賢振 vs 湯普森",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 9.5，傾向小分",
+          "讓分盤：NC恐龍 受讓 +1.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -220,11 +240,11 @@ window.SCORE_PREDICTIONS = {
         "sourceUrl": "https://npb.jp/games/2026/schedule_06_detail.html",
         "modelTotal": 3,
         "modelHomeEdge": 1,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
+        "totalLine": 6.5,
+        "totalPick": "小分過盤",
+        "spreadTeam": "樂天金鷲",
+        "spreadLine": 1.5,
+        "spreadPick": "樂天金鷲 受讓 +1.5 過盤",
         "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
@@ -232,49 +252,18 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": 75,
+        "spreadConfidence": 68,
+        "betConfidence": 75,
+        "confidenceSource": "盤口模型",
         "awayPitcher": "大竹耕太郎",
         "homePitcher": "前田健太",
-        "oddsUpdatedAt": "2026-06-16T20:13:39.814Z",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.201Z",
         "analysisItems": [
           "先發投手：大竹耕太郎 vs 前田健太",
           "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
-        ],
-        "aiPredictionSource": "未啟用 AI",
-        "aiBetRecommendation": "未取得",
-        "aiRationale": []
-      },
-      {
-        "id": "2026-06-17-npb-2",
-        "sport": "Baseball",
-        "league": "NPB 日本職棒",
-        "startTime": "2026-06-17T18:00:00+09:00",
-        "awayTeam": "廣島鯉魚",
-        "homeTeam": "日本火腿鬥士",
-        "venue": "マツダスタジアム",
-        "status": "scheduled",
-        "source": "NPB.jp 官方賽程",
-        "sourceUrl": "https://npb.jp/games/2026/schedule_06_detail.html",
-        "modelTotal": 14,
-        "modelHomeEdge": 0,
-        "totalLine": null,
-        "totalPick": "未取得",
-        "spreadTeam": "",
-        "spreadLine": null,
-        "spreadPick": "未取得",
-        "oddsSource": "未取得盤口",
-        "factors": [
-          "官方賽程",
-          "大小分",
-          "讓分盤"
-        ],
-        "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-        "analysisItems": [
-          "先發投手：公開來源未取得",
-          "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
-          "大小分盤：未取得公開盤口",
-          "讓分盤：未取得公開盤口"
+          "大小分盤 6.5，傾向小分",
+          "讓分盤：樂天金鷲 受讓 +1.5 過盤"
         ],
         "aiPredictionSource": "未啟用 AI",
         "aiBetRecommendation": "未取得",
@@ -298,15 +287,22 @@ window.SCORE_PREDICTIONS = {
         "spreadTeam": "",
         "spreadLine": null,
         "spreadPick": "未取得",
-        "oddsSource": "未取得盤口",
+        "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
           "大小分",
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
+        "awayPitcher": "曾家輝",
+        "homePitcher": "江承諺",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
         "analysisItems": [
-          "先發投手：公開來源未取得",
+          "先發投手：曾家輝 vs 江承諺",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
@@ -333,15 +329,22 @@ window.SCORE_PREDICTIONS = {
         "spreadTeam": "",
         "spreadLine": null,
         "spreadPick": "未取得",
-        "oddsSource": "未取得盤口",
+        "oddsSource": "玩運彩",
         "factors": [
           "官方賽程",
           "大小分",
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
+        "awayPitcher": "阿部雄大",
+        "homePitcher": "梅賽鍶",
+        "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
         "analysisItems": [
-          "先發投手：公開來源未取得",
+          "先發投手：阿部雄大 vs 梅賽鍶",
           "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
           "大小分盤：未取得公開盤口",
           "讓分盤：未取得公開盤口"
@@ -379,6 +382,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
@@ -411,6 +418,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0",
@@ -445,6 +456,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
@@ -479,6 +494,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
@@ -513,6 +532,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
@@ -547,6 +570,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
@@ -581,6 +608,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
@@ -615,6 +646,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；西武獅 近7日 5勝1敗，場均得2.5、失1.2",
@@ -649,6 +684,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
@@ -683,6 +722,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
@@ -715,6 +758,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；中信兄弟 近7日 0勝2敗，場均得4.3、失6.3",
@@ -749,6 +796,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
@@ -783,6 +834,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
@@ -817,6 +872,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
@@ -851,6 +910,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
@@ -885,6 +948,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
@@ -919,6 +986,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
@@ -953,6 +1024,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
@@ -987,6 +1062,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
@@ -1021,6 +1100,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
@@ -1055,6 +1138,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
@@ -1089,6 +1176,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
@@ -1123,6 +1214,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
@@ -1157,6 +1252,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
@@ -1191,6 +1290,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；中信兄弟 近7日 0勝2敗，場均得4.3、失6.3",
@@ -1225,6 +1328,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
@@ -1259,6 +1366,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
@@ -1293,6 +1404,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
@@ -1327,6 +1442,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
@@ -1361,6 +1480,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
@@ -1395,6 +1518,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
@@ -1429,6 +1556,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
@@ -1463,6 +1594,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
@@ -1497,6 +1632,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
@@ -1531,6 +1670,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
@@ -1565,6 +1708,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
@@ -1597,6 +1744,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
@@ -1629,6 +1780,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
@@ -1663,6 +1818,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
@@ -1697,6 +1856,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
@@ -1731,6 +1894,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
@@ -1765,6 +1932,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
@@ -1799,6 +1970,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
@@ -1833,6 +2008,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
@@ -1867,6 +2046,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
@@ -1901,6 +2084,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
@@ -1935,6 +2122,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
@@ -1969,6 +2160,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
@@ -2003,6 +2198,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
@@ -2037,6 +2236,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
@@ -2071,6 +2274,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "中信兄弟 近7日 0勝2敗，場均得4.3、失6.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
@@ -2105,6 +2312,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；富邦悍將 近7日 2勝1敗，場均得4.3、失3.3",
@@ -2137,6 +2348,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
@@ -2171,6 +2386,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
@@ -2205,6 +2424,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；樂天巨人 近7日 3勝3敗，場均得6.7、失5.8",
@@ -2239,6 +2462,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "三星獅 近7日 4勝2敗，場均得5.8、失4.2；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
@@ -2273,6 +2500,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "起亞虎 近7日 1勝5敗，場均得1.8、失5.0；韓華鷹 近7日 2勝4敗，場均得3.3、失3.3",
@@ -2307,6 +2538,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
@@ -2341,6 +2576,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
@@ -2375,6 +2614,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
@@ -2409,6 +2652,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
@@ -2443,6 +2690,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
@@ -2477,6 +2728,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
@@ -2511,6 +2766,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
@@ -2543,6 +2802,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "統一7-ELEVEn獅 近7日 2勝1敗，場均得4.7、失4.0；樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5",
@@ -2577,6 +2840,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8；LG雙子 近7日 5勝1敗，場均得7.8、失4.8",
@@ -2611,6 +2878,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "斗山熊 近7日 3勝3敗，場均得4.7、失3.5；樂天巨人 近7日 3勝3敗，場均得6.7、失5.8",
@@ -2645,6 +2916,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "三星獅 近7日 4勝2敗，場均得5.8、失4.2；KT巫師 近7日 4勝1敗，場均得5.0、失4.8",
@@ -2679,6 +2954,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "起亞虎 近7日 1勝5敗，場均得1.8、失5.0；韓華鷹 近7日 2勝4敗，場均得3.3、失3.3",
@@ -2713,6 +2992,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "NC恐龍 近7日 3勝2敗，場均得4.8、失4.6；培證英雄 近7日 3勝3敗，場均得2.5、失2.8",
@@ -2747,6 +3030,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5；橫濱DeNA海灣之星 近7日 1勝4敗，場均得4.8、失4.4",
@@ -2781,6 +3068,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0；讀賣巨人 近7日 2勝3敗，場均得2.2、失2.6",
@@ -2815,6 +3106,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "西武獅 近7日 5勝1敗，場均得2.5、失1.2；廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2",
@@ -2849,6 +3144,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "羅德海洋 近7日 3勝2敗，場均得4.4、失7.0；中日龍 近7日 2勝3敗，場均得5.2、失3.8",
@@ -2883,6 +3182,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "歐力士猛牛 近7日 4勝1敗，場均得4.0、失3.0；養樂多燕子 近7日 2勝3敗，場均得3.0、失4.4",
@@ -2917,6 +3220,10 @@ window.SCORE_PREDICTIONS = {
           "讓分盤"
         ],
         "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+        "totalConfidence": null,
+        "spreadConfidence": null,
+        "betConfidence": null,
+        "confidenceSource": "",
         "analysisItems": [
           "先發投手：公開來源未取得",
           "軟銀鷹 近7日 3勝2敗，場均得3.8、失2.6；阪神虎 近7日 1勝5敗，場均得2.2、失3.0",
@@ -3866,11 +4173,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 15,
       "modelHomeEdge": -3,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 8.5,
+      "totalPick": "大分過盤",
+      "spreadTeam": "斗山熊",
+      "spreadLine": 1.5,
+      "spreadPick": "KT巫師 讓分 -1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -3878,14 +4185,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 76,
+      "spreadConfidence": 61,
+      "betConfidence": 76,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "Matt Sauer",
       "homePitcher": "高田琢登",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.831Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
       "analysisItems": [
         "先發投手：Matt Sauer vs 高田琢登",
         "KT巫師 近7日 4勝1敗，場均得5.0、失4.8；斗山熊 近7日 3勝3敗，場均得4.7、失3.5",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 8.5，傾向大分",
+        "讓分盤：KT巫師 讓分 -1.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -3904,11 +4215,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
       "modelHomeEdge": 5,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 11.5,
+      "totalPick": "小分過盤",
+      "spreadTeam": "培證英雄",
+      "spreadLine": 2.5,
+      "spreadPick": "三星獅 讓分 -2.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -3916,14 +4227,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 68,
+      "spreadConfidence": 68,
+      "betConfidence": 68,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "朴俊賢",
       "homePitcher": "崔原態",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
       "analysisItems": [
         "先發投手：朴俊賢 vs 崔原態",
         "培證英雄 近7日 3勝3敗，場均得2.5、失2.8；三星獅 近7日 4勝2敗，場均得5.8、失4.2",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 11.5，傾向小分",
+        "讓分盤：三星獅 讓分 -2.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -3942,11 +4257,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 15,
       "modelHomeEdge": -1,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 10.5,
+      "totalPick": "大分過盤",
+      "spreadTeam": "SSG登陸者",
+      "spreadLine": 1.5,
+      "spreadPick": "SSG登陸者 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -3954,14 +4269,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 76,
+      "spreadConfidence": 54,
+      "betConfidence": 76,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "朴世雄",
       "homePitcher": "金鍵宇",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
       "analysisItems": [
         "先發投手：朴世雄 vs 金鍵宇",
         "樂天巨人 近7日 3勝3敗，場均得6.7、失5.8；SSG登陸者 近7日 1勝5敗，場均得5.3、失8.8",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 10.5，傾向大分",
+        "讓分盤：SSG登陸者 受讓 +1.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -3980,11 +4299,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
       "modelHomeEdge": -1,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 10.5,
+      "totalPick": "小分過盤",
+      "spreadTeam": "LG雙子",
+      "spreadLine": 1.5,
+      "spreadPick": "LG雙子 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -3992,14 +4311,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 61,
+      "spreadConfidence": 68,
+      "betConfidence": 68,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "張現植",
       "homePitcher": "奧勒",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
       "analysisItems": [
         "先發投手：張現植 vs 奧勒",
         "LG雙子 近7日 5勝1敗，場均得7.8、失4.8；起亞虎 近7日 1勝5敗，場均得1.8、失5.0",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 10.5，傾向小分",
+        "讓分盤：LG雙子 受讓 +1.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -4018,11 +4341,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://www.koreabaseball.com/Schedule/Schedule.aspx",
       "modelTotal": 9,
       "modelHomeEdge": 3,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 9.5,
+      "totalPick": "小分過盤",
+      "spreadTeam": "NC恐龍",
+      "spreadLine": 1.5,
+      "spreadPick": "NC恐龍 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4030,14 +4353,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "KBO 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 54,
+      "spreadConfidence": 80,
+      "betConfidence": 80,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "柳賢振",
       "homePitcher": "湯普森",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.832Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.318Z",
       "analysisItems": [
         "先發投手：柳賢振 vs 湯普森",
         "韓華鷹 近7日 2勝4敗，場均得3.3、失3.3；NC恐龍 近7日 3勝2敗，場均得4.8、失4.6",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 9.5，傾向小分",
+        "讓分盤：NC恐龍 受讓 +1.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -4056,11 +4383,11 @@ window.SCORE_PREDICTIONS = {
       "sourceUrl": "https://npb.jp/games/2026/schedule_06_detail.html",
       "modelTotal": 3,
       "modelHomeEdge": 1,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
+      "totalLine": 6.5,
+      "totalPick": "小分過盤",
+      "spreadTeam": "樂天金鷲",
+      "spreadLine": 1.5,
+      "spreadPick": "樂天金鷲 受讓 +1.5 過盤",
       "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
@@ -4068,49 +4395,18 @@ window.SCORE_PREDICTIONS = {
         "讓分盤"
       ],
       "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": 75,
+      "spreadConfidence": 68,
+      "betConfidence": 75,
+      "confidenceSource": "盤口模型",
       "awayPitcher": "大竹耕太郎",
       "homePitcher": "前田健太",
-      "oddsUpdatedAt": "2026-06-16T20:13:39.814Z",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.201Z",
       "analysisItems": [
         "先發投手：大竹耕太郎 vs 前田健太",
         "阪神虎 近7日 1勝5敗，場均得2.2、失3.0；樂天金鷲 近7日 2勝3敗，場均得2.0、失3.0",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
-      ],
-      "aiPredictionSource": "未啟用 AI",
-      "aiBetRecommendation": "未取得",
-      "aiRationale": []
-    },
-    {
-      "id": "2026-06-17-npb-2",
-      "sport": "Baseball",
-      "league": "NPB 日本職棒",
-      "startTime": "2026-06-17T18:00:00+09:00",
-      "awayTeam": "廣島鯉魚",
-      "homeTeam": "日本火腿鬥士",
-      "venue": "マツダスタジアム",
-      "status": "scheduled",
-      "source": "NPB.jp 官方賽程",
-      "sourceUrl": "https://npb.jp/games/2026/schedule_06_detail.html",
-      "modelTotal": 14,
-      "modelHomeEdge": 0,
-      "totalLine": null,
-      "totalPick": "未取得",
-      "spreadTeam": "",
-      "spreadLine": null,
-      "spreadPick": "未取得",
-      "oddsSource": "未取得盤口",
-      "factors": [
-        "官方賽程",
-        "大小分",
-        "讓分盤"
-      ],
-      "note": "NPB.jp 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
-      "analysisItems": [
-        "先發投手：公開來源未取得",
-        "廣島鯉魚 近7日 2勝4敗，場均得1.8、失2.2；日本火腿鬥士 近7日 5勝1敗，場均得3.5、失2.5",
-        "大小分盤：未取得公開盤口",
-        "讓分盤：未取得公開盤口"
+        "大小分盤 6.5，傾向小分",
+        "讓分盤：樂天金鷲 受讓 +1.5 過盤"
       ],
       "aiPredictionSource": "未啟用 AI",
       "aiBetRecommendation": "未取得",
@@ -4134,15 +4430,22 @@ window.SCORE_PREDICTIONS = {
       "spreadTeam": "",
       "spreadLine": null,
       "spreadPick": "未取得",
-      "oddsSource": "未取得盤口",
+      "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
         "大小分",
         "讓分盤"
       ],
       "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": null,
+      "spreadConfidence": null,
+      "betConfidence": null,
+      "confidenceSource": "",
+      "awayPitcher": "曾家輝",
+      "homePitcher": "江承諺",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
       "analysisItems": [
-        "先發投手：公開來源未取得",
+        "先發投手：曾家輝 vs 江承諺",
         "樂天桃猿 近7日 1勝0敗，場均得5.0、失4.5；台鋼雄鷹 近7日 2勝2敗，場均得3.8、失2.3",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"
@@ -4169,15 +4472,22 @@ window.SCORE_PREDICTIONS = {
       "spreadTeam": "",
       "spreadLine": null,
       "spreadPick": "未取得",
-      "oddsSource": "未取得盤口",
+      "oddsSource": "玩運彩",
       "factors": [
         "官方賽程",
         "大小分",
         "讓分盤"
       ],
       "note": "CPBL 官方賽程 抓取賽程；每日固定分析先發投手、近7日攻守狀態、大小分與讓分盤。",
+      "totalConfidence": null,
+      "spreadConfidence": null,
+      "betConfidence": null,
+      "confidenceSource": "",
+      "awayPitcher": "阿部雄大",
+      "homePitcher": "梅賽鍶",
+      "oddsUpdatedAt": "2026-06-17T04:07:23.160Z",
       "analysisItems": [
-        "先發投手：公開來源未取得",
+        "先發投手：阿部雄大 vs 梅賽鍶",
         "富邦悍將 近7日 2勝1敗，場均得4.3、失3.3；味全龍 近7日 1勝2敗，場均得3.3、失5.3",
         "大小分盤：未取得公開盤口",
         "讓分盤：未取得公開盤口"

@@ -514,6 +514,72 @@ input[type="range"] {
   box-shadow: 0 12px 28px rgba(23, 32, 29, 0.08);
 }
 
+.bet-recommendation {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(23, 79, 63, 0.28);
+  border-left: 5px solid var(--field);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: #eef8f3;
+}
+
+.bet-recommendation span {
+  color: var(--field-deep);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.bet-recommendation strong {
+  color: var(--field-deep);
+  font-size: clamp(1.08rem, 2vw, 1.3rem);
+  line-height: 1.25;
+}
+
+.bet-recommendation p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.bet-recommendation em,
+.bet-recommendation b {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: rgba(23, 79, 63, 0.1);
+  color: var(--field-deep);
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.bet-recommendation small {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.bet-recommendation--waiting {
+  border-left-color: var(--amber);
+  background: #fff8e9;
+}
+
+.bet-recommendation--ai {
+  border-color: rgba(35, 168, 184, 0.35);
+  border-left-color: var(--cyan);
+  background: #edfafe;
+}
+
+.bet-recommendation--ai em,
+.bet-recommendation--ai b {
+  background: rgba(35, 168, 184, 0.14);
+  color: #0f5661;
+}
+
 .market-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

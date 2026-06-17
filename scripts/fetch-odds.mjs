@@ -339,6 +339,35 @@ function pickTotal(game, totalLine) {
   return modelTotal > Number(totalLine) ? "大分過盤" : "小分過盤";
 }
 
+function confidenceFromEdge(edge, cap = 78) {
+  if (!Number.isFinite(Number(edge))) return null;
+  return Math.min(cap, Math.max(51, Math.round(50 + Math.abs(Number(edge)) * 7)));
+}
+
+function pickTotalConfidence(game, totalLine) {
+  if (totalLine === null || totalLine === undefined) return null;
+  if (!Number.isFinite(Number(totalLine))) return null;
+  if (!Number.isFinite(Number(game.modelTotal))) return null;
+  return confidenceFromEdge(Number(game.modelTotal) - Number(totalLine), 76);
+}
+
+function spreadCoverEdge(game, odds) {
+  if (!odds.spreadTeam || !Number.isFinite(Number(odds.spreadLine))) return null;
+  if (!Number.isFinite(Number(game.modelHomeEdge))) return null;
+  const line = Number(odds.spreadLine);
+  const homeEdge = Number(game.modelHomeEdge);
+  const awayEdge = -homeEdge;
+  const spreadTeamIsHome = odds.spreadTeam === game.homeTeam;
+  const spreadTeamEdge = spreadTeamIsHome ? homeEdge : awayEdge;
+  return spreadTeamEdge + line;
+}
+
+function pickSpreadConfidence(game, odds) {
+  const edge = spreadCoverEdge(game, odds);
+  if (edge === null) return null;
+  return confidenceFromEdge(edge, 80);
+}
+
 function pickSpread(game, odds) {
   if (!odds.spreadTeam || !Number.isFinite(Number(odds.spreadLine))) return "未取得";
   const line = Number(odds.spreadLine);
@@ -366,20 +395,32 @@ export function applyOddsToPredictions(games, oddsList) {
         ...game,
         totalLine: null,
         totalPick: "未取得",
+        totalConfidence: null,
         spreadTeam: "",
         spreadLine: null,
         spreadPick: "未取得",
+        spreadConfidence: null,
+        betConfidence: null,
+        confidenceSource: "",
         oddsSource: "未取得盤口"
       };
     }
+
+    const totalConfidence = pickTotalConfidence(game, odds.totalLine);
+    const spreadConfidence = pickSpreadConfidence(game, odds);
+    const availableConfidence = [totalConfidence, spreadConfidence].filter((value) => value !== null);
 
     return {
       ...game,
       totalLine: odds.totalLine,
       totalPick: pickTotal(game, odds.totalLine),
+      totalConfidence,
       spreadTeam: odds.spreadTeam,
       spreadLine: odds.spreadLine,
       spreadPick: pickSpread(game, odds),
+      spreadConfidence,
+      betConfidence: availableConfidence.length ? Math.max(...availableConfidence) : null,
+      confidenceSource: availableConfidence.length ? "盤口模型" : "",
       oddsSource: odds.source,
       awayPitcher: odds.awayTeam === game.awayTeam ? odds.awayPitcher : odds.homePitcher,
       homePitcher: odds.homeTeam === game.homeTeam ? odds.homePitcher : odds.awayPitcher,
