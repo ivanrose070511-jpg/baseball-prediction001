@@ -3,10 +3,12 @@ name: Update Predictions And Deploy
 on:
   workflow_dispatch:
   schedule:
-    # Asia/Taipei weekday 14:00
-    - cron: "0 6 * * 1-5"
-    # Asia/Taipei weekend 11:00
-    - cron: "0 3 * * 6,0"
+    # GitHub scheduled jobs can queue for several minutes. Start 15 minutes early
+    # so the completed deployment lands close to the requested Taipei time.
+    # Asia/Taipei weekday target: 14:00
+    - cron: "45 5 * * 1-5"
+    # Asia/Taipei weekend target: 11:00
+    - cron: "45 2 * * 6,0"
     # Asia/Taipei daily 22:30
     - cron: "30 14 * * *"
 
@@ -33,11 +35,21 @@ jobs:
         run: npm ci
 
       - name: Update schedule, odds, predictions, and results
-        run: npm run update:data
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            echo "ChatGPT update attempt ${attempt}/3"
+            if REQUIRE_OPENAI=true npm run update:data; then
+              exit 0
+            fi
+            sleep $((attempt * 30))
+          done
+
+          echo "::warning::ChatGPT was unavailable after three attempts. Updating schedules and odds without an AI label so the public site does not remain stale."
+          REQUIRE_OPENAI=false npm run update:data
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
-          REQUIRE_OPENAI: "true"
 
       - name: Build static assets
         run: npm run build
