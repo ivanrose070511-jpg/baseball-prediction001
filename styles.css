@@ -459,6 +459,40 @@ input[type="range"] {
   margin-bottom: 24px;
 }
 
+.today-league-list {
+  display: grid;
+  gap: 18px;
+}
+
+.today-league-section {
+  display: grid;
+  gap: 10px;
+}
+
+.today-league-section__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.today-league-section__heading strong {
+  color: var(--field-deep);
+  font-size: 1.05rem;
+}
+
+.today-league-section__heading span {
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #edf4f1;
+  color: var(--field-deep);
+  font-size: 0.8rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
 .subsection-heading {
   display: flex;
   align-items: baseline;

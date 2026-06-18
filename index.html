@@ -19,6 +19,7 @@
         <span>亞洲職棒預測</span>
       </a>
       <nav class="nav-links" aria-label="主要導覽">
+        <a href="#today-schedule">今日賽程</a>
         <a href="#today">今日預測</a>
         <a href="#past">過去預測</a>
         <a href="#future">未來賽程</a>
@@ -123,31 +124,41 @@
       </section>
 
       <section class="view-tabs" aria-label="頁面切換">
-        <button class="view-tab is-active" type="button" data-view="today">今日賽程與預測</button>
+        <button class="view-tab is-active" type="button" data-view="today-schedule">今日賽程</button>
+        <button class="view-tab" type="button" data-view="today">今日預測</button>
         <button class="view-tab" type="button" data-view="past">過去賽程與預測</button>
         <button class="view-tab" type="button" data-view="future">未來賽程</button>
       </section>
 
-      <section class="predictions view-panel is-active" id="today" data-panel="today" aria-live="polite">
+      <section class="predictions view-panel is-active" id="today-schedule" data-panel="today-schedule" aria-live="polite">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Today</p>
-            <h2>今日賽程與今日預測</h2>
+            <h2>今日賽程</h2>
           </div>
-          <p id="today-status">顯示全部預測</p>
+          <p id="today-schedule-status">顯示今日全部場次</p>
         </div>
-        <div class="today-schedule-block">
-          <div class="subsection-heading">
-            <strong>今日完整賽程</strong>
-            <span>全部場次</span>
+        <div class="subsection-heading">
+          <strong>今日完整賽程</strong>
+          <span>依聯盟分組</span>
+        </div>
+        <div class="today-league-list" id="today-schedule-grid"></div>
+        <p class="empty-state" id="today-schedule-empty" hidden>今日沒有符合條件的賽程。</p>
+      </section>
+
+      <section class="predictions view-panel" id="today" data-panel="today" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Today Picks</p>
+            <h2>今日預測</h2>
           </div>
-          <div class="schedule-table" id="today-schedule-grid"></div>
+          <p id="today-status">顯示今日精選預測</p>
         </div>
         <div class="subsection-heading">
           <strong>今日精選預測</strong>
           <span>每個聯盟 2 到 3 場</span>
         </div>
-        <div class="prediction-grid" id="today-grid"></div>
+        <div class="today-league-list" id="today-grid"></div>
         <p class="empty-state" id="today-empty" hidden>今日沒有符合條件的賽程。</p>
       </section>
 

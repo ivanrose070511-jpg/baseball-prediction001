@@ -19,6 +19,7 @@ const predictionSchema = {
           betRecommendation: { type: "string" },
           confidence: { type: "integer", minimum: 0, maximum: 100 },
           rationale: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 5 },
+          detailedAnalysis: { type: "string", minLength: 80, maxLength: 420 },
           riskNote: { type: "string" }
         },
         required: [
@@ -30,6 +31,7 @@ const predictionSchema = {
           "betRecommendation",
           "confidence",
           "rationale",
+          "detailedAnalysis",
           "riskNote"
         ]
       }
@@ -107,7 +109,7 @@ async function requestAiPredictions(games) {
             type: "input_text",
             text: JSON.stringify({
               task:
-                "For each game, produce a predicted score, over/under pick, run-line pick, single betting recommendation, confidence score, rationale, and risk note. If totalLine or spreadLine is missing, use 未取得 for that market and keep the recommendation conservative.",
+                "For each game, produce a predicted score, over/under pick, run-line pick, single betting recommendation, confidence score, rationale, a detailedAnalysis paragraph, and risk note. The detailedAnalysis must be 180-260 Traditional Chinese characters, written like a betting analysis article, and mention matchup context, pitcher or recent form when available, market line meaning, and why the final pick is preferred. If totalLine or spreadLine is missing, use 未取得 for that market and keep the recommendation conservative.",
               games: games.map(compactGame)
             })
           }
@@ -162,6 +164,7 @@ function mergeAiPrediction(game, prediction) {
     aiBetRecommendation: prediction.betRecommendation,
     aiConfidence: prediction.confidence,
     aiRationale: prediction.rationale,
+    aiDetailedAnalysis: prediction.detailedAnalysis,
     aiRiskNote: prediction.riskNote
   };
 }

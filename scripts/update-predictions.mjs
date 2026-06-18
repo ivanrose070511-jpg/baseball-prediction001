@@ -237,6 +237,7 @@ function preserveStoredPredictions(games, existingPayload) {
         "aiBetRecommendation",
         "aiConfidence",
         "aiRationale",
+        "aiDetailedAnalysis",
         "aiRiskNote"
       ]);
     }
@@ -327,7 +328,7 @@ function markFeaturedPredictions(games) {
   }));
 }
 
-function shortText(value, maxLength = 120) {
+function shortText(value, maxLength = 300) {
   const text = String(value || "")
     .replace(/\s+/g, " ")
     .trim();
@@ -335,15 +336,23 @@ function shortText(value, maxLength = 120) {
 }
 
 function buildDetailedAnalysis(game) {
+  if (game.aiDetailedAnalysis) return shortText(game.aiDetailedAnalysis, 340);
+
   const aiText = Array.isArray(game.aiRationale) ? game.aiRationale.filter(Boolean).join(" ") : "";
-  if (aiText) return shortText(aiText, 130);
+  if (aiText) return shortText(aiText, 280);
 
   const items = Array.isArray(game.analysisItems) ? game.analysisItems.filter(Boolean) : [];
-  if (items.length) return shortText(items.join("；"), 130);
+  if (items.length) {
+    const [pitcherText = "", formText = "", totalText = "", spreadText = ""] = items;
+    return shortText(
+      `本場重點先看兩隊投手與近期攻守落差。${pitcherText}，${formText}。盤口面來看，${totalText}，${spreadText}。目前判斷會優先看哪一方比較能控制失分，以及打線近況是否足以支撐大小分方向。若公開盤口完整，會以盤口方向搭配近況判斷；若大小分或讓分資訊不足，下注上建議降低部位，等臨場賠率更新後再確認是否仍有價值。`,
+      360
+    );
+  }
 
   return shortText(
-    `${game.awayTeam} 對 ${game.homeTeam}，目前依公開盤口、先發投手與近期得失分整理投注方向；若盤口不足，建議等待更完整資訊。`,
-    130
+    `${game.awayTeam} 對 ${game.homeTeam} 目前以公開賽程與可取得盤口做初步判斷。因先發、近期攻守或盤口資料可能尚未完整，這場會先保守看待，不追求硬下結論；若後續讓分與大小分盤口補齊，會再依兩隊近況、主客場、投手狀態與市場變化重新確認投注方向。下注前仍要留意臨場盤口是否快速跳動。`,
+    360
   );
 }
 

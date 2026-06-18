@@ -38,7 +38,8 @@ const confidenceOutput = document.querySelector("#confidence-output");
 const resetButton = document.querySelector("#reset-filters");
 const leagueBoard = document.querySelector("#league-board");
 const viewTabs = document.querySelectorAll(".view-tab");
-let activeView = "today";
+const tabViews = ["today-schedule", "today", "past", "future"];
+let activeView = "today-schedule";
 
 const formatDateTime = (value) =>
   new Intl.DateTimeFormat("zh-TW", {
@@ -309,6 +310,47 @@ function createScheduleRow(game) {
   return row;
 }
 
+function leagueRank(league) {
+  const order = ["KBO 韓國職棒", "NPB 日本職棒", "CPBL 中華職棒"];
+  const index = order.indexOf(league);
+  return index === -1 ? order.length : index;
+}
+
+function groupByLeague(items) {
+  return [...items]
+    .sort((a, b) => leagueRank(a.league) - leagueRank(b.league) || new Date(a.startTime) - new Date(b.startTime))
+    .reduce((groups, item) => {
+      const league = item.league || "其他聯盟";
+      if (!groups.has(league)) groups.set(league, []);
+      groups.get(league).push(item);
+      return groups;
+    }, new Map());
+}
+
+function createTodayLeagueSection(league, items, options) {
+  const section = document.createElement("section");
+  section.className = "today-league-section";
+  const content = document.createElement("div");
+  content.className = options.contentClass;
+  content.replaceChildren(...items.map(options.createItem));
+
+  section.innerHTML = `
+    <div class="today-league-section__heading">
+      <strong>${league}</strong>
+      <span>${items.length} ${options.unit}</span>
+    </div>
+  `;
+  section.append(content);
+  return section;
+}
+
+function renderTodayLeagueGroups(container, items, options) {
+  const sections = [...groupByLeague(items)].map(([league, leagueItems]) =>
+    createTodayLeagueSection(league, leagueItems, options)
+  );
+  container.replaceChildren(...sections);
+}
+
 function populateLeagues() {
   const leagues = [...new Set(allGames.map((item) => item.league).filter(Boolean))].sort();
   leagueFilter.replaceChildren(new Option("全部", "all"));
@@ -403,19 +445,33 @@ function updateSettlementRecord() {
   if (values[2]) values[2].textContent = counts.push;
 }
 
+function itemsForView(viewName) {
+  if (viewName === "today-schedule") return filtered("today", { ignoreConfidence: true });
+  if (viewName === "today") return filtered("today", { featuredOnly: true });
+  return filtered(viewName);
+}
+
 function renderView(viewName) {
-  const items = filtered(viewName, { featuredOnly: viewName === "today" });
+  const items = itemsForView(viewName);
   const grid = document.querySelector(`#${viewName}-grid`);
   const empty = document.querySelector(`#${viewName}-empty`);
   const status = document.querySelector(`#${viewName}-status`);
   const leagueText = leagueFilter.value === "all" ? "全部聯盟" : leagueFilter.value;
 
-  if (viewName === "today") {
-    const scheduleItems = filtered("today", { ignoreConfidence: true });
-    const scheduleGrid = document.querySelector("#today-schedule-grid");
-    scheduleGrid.replaceChildren(...scheduleItems.map(createScheduleRow));
-    grid.replaceChildren(...items.map((item) => createPredictionCard(item)));
-    status.textContent = `${leagueText} · 賽程 ${scheduleItems.length} 場 · 精選 ${items.length} 場`;
+  if (viewName === "today-schedule") {
+    renderTodayLeagueGroups(grid, items, {
+      contentClass: "schedule-table",
+      createItem: createScheduleRow,
+      unit: "場比賽"
+    });
+    status.textContent = `${leagueText} · 今日賽程 ${items.length} 場`;
+  } else if (viewName === "today") {
+    renderTodayLeagueGroups(grid, items, {
+      contentClass: "prediction-grid",
+      createItem: (item) => createPredictionCard(item),
+      unit: "場精選"
+    });
+    status.textContent = `${leagueText} · 今日精選 ${items.length} 場`;
   } else if (viewName === "future") {
     grid.replaceChildren(...items.map(createScheduleRow));
     status.textContent = `${leagueText} · ${items.length} 場`;
@@ -431,18 +487,25 @@ function renderView(viewName) {
 function render() {
   confidenceOutput.textContent = `${confidenceFilter.value}%+`;
   updateSettlementRecord();
+  renderView("today-schedule");
   renderView("today");
   renderView("past");
   renderView("future");
 }
 
 function switchView(viewName) {
+  if (!tabViews.includes(viewName)) return;
   activeView = viewName;
   viewTabs.forEach((tab) => tab.classList.toggle("is-active", tab.dataset.view === viewName));
   document.querySelectorAll(".view-panel").forEach((panel) => {
     panel.classList.toggle("is-active", panel.dataset.panel === viewName);
   });
-  updateInsights(filtered(viewName, { featuredOnly: viewName === "today" }));
+  updateInsights(itemsForView(viewName));
+}
+
+function viewFromHash() {
+  const hashView = window.location.hash.replace("#", "");
+  return tabViews.includes(hashView) ? hashView : "today-schedule";
 }
 
 function bootstrap() {
@@ -457,7 +520,7 @@ function bootstrap() {
   populateLeagues();
   renderLeagueBoard();
   render();
-  switchView("today");
+  switchView(viewFromHash());
 }
 
 leagueFilter.addEventListener("change", render);
@@ -467,6 +530,12 @@ resetButton.addEventListener("click", () => {
   confidenceFilter.value = 0;
   render();
 });
-viewTabs.forEach((tab) => tab.addEventListener("click", () => switchView(tab.dataset.view)));
+viewTabs.forEach((tab) =>
+  tab.addEventListener("click", () => {
+    switchView(tab.dataset.view);
+    history.replaceState(null, "", `#${tab.dataset.view}`);
+  })
+);
+window.addEventListener("hashchange", () => switchView(viewFromHash()));
 
 bootstrap();
