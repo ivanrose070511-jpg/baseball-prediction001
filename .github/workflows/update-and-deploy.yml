@@ -7,6 +7,85 @@ on:
     # so the completed deployment lands close to the requested Taipei time.
     # Asia/Taipei weekday target: 14:00
     - cron: "45 5 * * 1-5"
+    # Weekday backup: 14:20
+    - cron: "20 6 * * 1-5"
+    # Asia/Taipei weekend target: 11:00
+    - cron: "45 2 * * 6,0"
+    # Weekend backup: 11:20
+    - cron: "20 3 * * 6,0"
+    # Asia/Taipei daily 22:30
+    - cron: "30 14 * * *"
+    # Daily result backup: 23:00
+    - cron: "0 15 * * *"
+
+concurrency:
+  group: update-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check whether a backup run is needed
+        id: freshness
+        run: node scripts/check-schedule-freshness.mjs
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+
+      - name: Setup Node
+        if: steps.freshness.outputs.should_run == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.freshness.outputs.should_run == 'true'
+        run: npm ci
+
+      - name: Update schedule, odds, predictions, and results
+        if: steps.freshness.outputs.should_run == 'true'
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            echo "ChatGPT update attempt ${attempt}/3"
+            if REQUIRE_OPENAI=true npm run update:data; then
+              exit 0
+            fi
+            sleep $((attempt * 30))
+          done
+
+          echo "::warning::ChatGPT was unavailable after three attempts. Updating schedules and odds without an AI label so the public site does not remain stale."
+          REQUIRE_OPENAI=false npm run update:data
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+
+      - name: Build static assets
+        if: steps.freshness.outputs.should_run == 'true'
+        run: npm run build
+
+      - name: Deploy to Cloudflare Workers
+        if: steps.freshness.outputs.should_run == 'true'
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+name: Update Predictions And Deploy
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub scheduled jobs can queue for several minutes. Start 15 minutes early
+    # so the completed deployment lands close to the requested Taipei time.
+    # Asia/Taipei weekday target: 14:00
+    - cron: "45 5 * * 1-5"
     # Asia/Taipei weekend target: 11:00
     - cron: "45 2 * * 6,0"
     # Asia/Taipei daily 22:30
