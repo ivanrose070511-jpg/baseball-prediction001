@@ -156,7 +156,11 @@
         </div>
         <div class="subsection-heading">
           <strong>今日精選預測</strong>
-          <span>每個聯盟 2 到 3 場</span>
+          <span>有足夠盤口時，每個聯盟 2 到 3 場</span>
+        </div>
+        <div class="selection-method" aria-label="精選場次方式">
+          <strong>場次怎麼挑</strong>
+          <p>先排除沒有正式讓分或大小分盤口的比賽，再依盤口完整度、既有模型信心與先發資訊排序；每個聯盟最多選 3 場，同分時優先較早開賽的場次，最後才交給 ChatGPT 做詳細分析。</p>
         </div>
         <div class="today-league-list" id="today-grid"></div>
         <p class="empty-state" id="today-empty" hidden>今日沒有符合條件的賽程。</p>
@@ -166,9 +170,9 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">History</p>
-            <h2>過去賽程與過去預測</h2>
+            <h2>近 5 天賽程與過盤結果</h2>
           </div>
-          <p id="past-status">顯示最近賽事</p>
+          <p id="past-status">僅顯示近 5 天</p>
         </div>
         <div class="prediction-grid" id="past-grid"></div>
         <p class="empty-state" id="past-empty" hidden>沒有符合條件的過去賽程。</p>

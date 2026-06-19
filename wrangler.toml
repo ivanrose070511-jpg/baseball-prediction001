@@ -7,3 +7,6 @@ workers_dev = true
 directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
+
+# Cron triggers are managed in the Cloudflare dashboard because the deployment
+# API token is intentionally not allowed to edit account-level schedules.

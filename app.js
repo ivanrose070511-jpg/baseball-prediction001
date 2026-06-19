@@ -63,12 +63,16 @@ function actualScore(game, side) {
   return Number.isFinite(Number(score)) ? `<span class="actual-score">比分 ${score}</span>` : "";
 }
 
-function formatTotal(game) {
+function formatTotal(game, pick = game.totalPick) {
   const line =
     game.totalLine !== null && game.totalLine !== undefined && Number.isFinite(Number(game.totalLine))
       ? ` ${Number(game.totalLine).toFixed(1)}`
       : "";
-  return `${game.totalPick || "未取得"}${line}`;
+  return `${pick || "未取得"}${line}`;
+}
+
+function publishedPick(game, aiField, marketField) {
+  return availablePick(game[aiField]) ? game[aiField] : game[marketField] || "未取得";
 }
 
 function getAiConfidence(game) {
@@ -255,6 +259,9 @@ function createPredictionCard(game, options = {}) {
     Number.isFinite(Number(game.actualAwayScore)) &&
     Number.isFinite(Number(game.actualHomeScore));
   const showActual = Boolean(options.showActual || hasFinalScore);
+  const pastMode = options.variant === "past";
+  const spreadPick = pastMode ? publishedPick(game, "aiSpreadPick", "spreadPick") : game.spreadPick || "未取得";
+  const totalPick = pastMode ? publishedPick(game, "aiTotalPick", "totalPick") : game.totalPick || "未取得";
   const card = document.createElement("article");
   card.className = "prediction-card";
   card.innerHTML = `
@@ -272,26 +279,26 @@ function createPredictionCard(game, options = {}) {
         <span class="team-side">主</span>
       </div>
     </div>
-    ${renderBetRecommendation(game)}
-    ${renderDetailedAnalysis(game)}
+    ${pastMode ? "" : renderBetRecommendation(game)}
+    ${pastMode ? "" : renderDetailedAnalysis(game)}
     <div class="market-grid" aria-label="預測項目">
       <div>
-        <span>讓分過盤</span>
-        <strong>${game.spreadPick || "未取得"}</strong>
+        <span>${pastMode ? "賽前讓分預測" : "讓分過盤"}</span>
+        <strong>${spreadPick}</strong>
       </div>
       <div>
-        <span>大小分</span>
-        <strong>${formatTotal(game)}</strong>
+        <span>${pastMode ? "賽前大小分預測" : "大小分"}</span>
+        <strong>${formatTotal(game, totalPick)}</strong>
       </div>
       <div>
-        <span>盤口來源</span>
+        <span>${pastMode ? "當時盤口來源" : "盤口來源"}</span>
         <strong>${game.oddsSource || "未取得盤口"}</strong>
       </div>
     </div>
-    ${renderAiPrediction(game)}
+    ${pastMode ? "" : renderAiPrediction(game)}
     ${renderSettlement(game)}
-    ${renderAnalysisItems(game)}
-    <p class="note">${game.note || game.source || ""}</p>
+    ${pastMode ? "" : renderAnalysisItems(game)}
+    ${pastMode ? "" : `<p class="note">${game.note || game.source || ""}</p>`}
   `;
   return card;
 }
@@ -448,6 +455,7 @@ function updateSettlementRecord() {
 function itemsForView(viewName) {
   if (viewName === "today-schedule") return filtered("today", { ignoreConfidence: true });
   if (viewName === "today") return filtered("today", { featuredOnly: true });
+  if (viewName === "past") return filtered("past", { ignoreConfidence: true });
   return filtered(viewName);
 }
 
@@ -476,8 +484,8 @@ function renderView(viewName) {
     grid.replaceChildren(...items.map(createScheduleRow));
     status.textContent = `${leagueText} · ${items.length} 場`;
   } else {
-    grid.replaceChildren(...items.map((item) => createPredictionCard(item, { showActual: viewName === "past" })));
-    status.textContent = `${leagueText} · ${items.length} 場`;
+    grid.replaceChildren(...items.map((item) => createPredictionCard(item, { showActual: true, variant: "past" })));
+    status.textContent = `${leagueText} · 近 5 天 ${items.length} 場`;
   }
   empty.hidden = items.length > 0;
 

@@ -512,6 +512,35 @@ input[type="range"] {
   font-weight: 800;
 }
 
+.selection-method {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 18px;
+  align-items: baseline;
+  margin: 0 0 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.selection-method strong {
+  color: var(--field-deep);
+  font-size: 0.9rem;
+}
+
+.selection-method p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .selection-method {
+    grid-template-columns: 1fr;
+  }
+}
+
 .prediction-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

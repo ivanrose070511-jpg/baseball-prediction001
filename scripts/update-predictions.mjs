@@ -210,6 +210,23 @@ function preserveStoredPredictions(games, existingPayload) {
     const stored = storedById.get(game.id);
     if (!stored) return game;
 
+    if (game.status === "final" || game.status === "postponed") {
+      const snapshot = { ...game };
+      for (const field of historicalPredictionFields) {
+        if (stored[field] !== undefined) snapshot[field] = stored[field];
+      }
+      return {
+        ...snapshot,
+        historicalPredictionAvailable:
+          hasPick(stored.aiTotalPick) ||
+          hasPick(stored.aiSpreadPick) ||
+          hasPick(stored.totalPick) ||
+          hasPick(stored.spreadPick),
+        predictionPublishedAt:
+          stored.predictionPublishedAt || stored.oddsUpdatedAt || existingPayload?.generatedAt || ""
+      };
+    }
+
     let next = { ...game };
     if (!hasPick(next.totalPick) && hasPick(stored.totalPick)) {
       next = copyFields(next, stored, ["totalLine", "totalPick", "totalConfidence"]);
@@ -245,6 +262,62 @@ function preserveStoredPredictions(games, existingPayload) {
   });
 }
 
+const historicalPredictionFields = [
+  "totalLine",
+  "totalPick",
+  "totalConfidence",
+  "spreadTeam",
+  "spreadLine",
+  "spreadPick",
+  "spreadConfidence",
+  "betConfidence",
+  "confidenceSource",
+  "oddsSource",
+  "oddsUpdatedAt",
+  "aiPredictionSource",
+  "aiTotalPick",
+  "aiSpreadPick",
+  "aiBetRecommendation",
+  "aiConfidence"
+];
+
+function preserveHistoricalPredictions(games, existingPayload) {
+  const storedById = storedPredictionMap(existingPayload);
+  return games.map((game) => {
+    const stored = storedById.get(game.id);
+    if (!stored) {
+      return {
+        ...game,
+        totalLine: null,
+        totalPick: "未取得",
+        spreadTeam: "",
+        spreadLine: null,
+        spreadPick: "未取得",
+        oddsSource: "未保存賽前盤口",
+        historicalPredictionAvailable: false
+      };
+    }
+
+    const next = { ...game };
+    for (const field of historicalPredictionFields) {
+      if (stored[field] !== undefined) next[field] = stored[field];
+    }
+    return {
+      ...next,
+      historicalPredictionAvailable: hasPick(stored.aiTotalPick) ||
+        hasPick(stored.aiSpreadPick) ||
+        hasPick(stored.totalPick) ||
+        hasPick(stored.spreadPick),
+      predictionPublishedAt:
+        stored.predictionPublishedAt || stored.oddsUpdatedAt || existingPayload?.generatedAt || ""
+    };
+  });
+}
+
+function historicalPick(game, aiField, marketField) {
+  return hasPick(game[aiField]) ? game[aiField] : game[marketField];
+}
+
 function gameHasFinalScore(game) {
   return (
     game.status === "final" &&
@@ -254,18 +327,20 @@ function gameHasFinalScore(game) {
 }
 
 function evaluateTotalPick(game) {
-  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.totalLine)) || !hasPick(game.totalPick)) return "";
+  const predictedPick = historicalPick(game, "aiTotalPick", "totalPick");
+  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.totalLine)) || !hasPick(predictedPick)) return "";
   const actualTotal = Number(game.actualAwayScore) + Number(game.actualHomeScore);
   const line = Number(game.totalLine);
   if (actualTotal === line) return "走水";
   const actualPick = actualTotal > line ? "大分過盤" : "小分過盤";
-  return game.totalPick === actualPick ? "過盤" : "未過";
+  return predictedPick === actualPick ? "過盤" : "未過";
 }
 
 function evaluateSpreadPick(game) {
-  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.spreadLine)) || !hasPick(game.spreadPick)) return "";
+  const predictedPick = historicalPick(game, "aiSpreadPick", "spreadPick");
+  if (!gameHasFinalScore(game) || !Number.isFinite(Number(game.spreadLine)) || !hasPick(predictedPick)) return "";
   const line = Number(game.spreadLine);
-  const pickText = String(game.spreadPick);
+  const pickText = String(predictedPick);
   const isUnderdogPick = pickText.includes("受讓");
   const isFavoritePick = pickText.includes("讓分");
   if (!isUnderdogPick && !isFavoritePick) return "";
@@ -304,6 +379,13 @@ function marketScore(game) {
   return score;
 }
 
+function hasPublishedMarket(game) {
+  return (
+    (Number.isFinite(Number(game.spreadLine)) && hasPick(game.spreadPick)) ||
+    (Number.isFinite(Number(game.totalLine)) && hasPick(game.totalPick))
+  );
+}
+
 function markFeaturedPredictions(games) {
   const byLeague = new Map();
   for (const game of games) {
@@ -314,7 +396,7 @@ function markFeaturedPredictions(games) {
 
   const featuredIds = new Set();
   for (const list of byLeague.values()) {
-    const ranked = [...list].sort((a, b) => {
+    const ranked = list.filter(hasPublishedMarket).sort((a, b) => {
       const scoreDiff = marketScore(b) - marketScore(a);
       if (scoreDiff !== 0) return scoreDiff;
       return new Date(a.startTime) - new Date(b.startTime);
@@ -386,7 +468,7 @@ const existingPayload = await readExistingPayload();
 
 try {
   todayResult = await fetchMany([0], { includeCompleted: true });
-  pastResult = await fetchMany([-7, -6, -5, -4, -3, -2, -1], { includeCompleted: true });
+  pastResult = await fetchMany([-5, -4, -3, -2, -1], { includeCompleted: true });
   futureResult = await fetchMany([1, 2, 3, 4, 5, 6, 7], { includeCompleted: false });
 } catch (error) {
   todayResult.errors.push(error.message);
@@ -399,21 +481,20 @@ let pastPredictions = pastResult.games
   .sort((a, b) => new Date(b.startTime) - new Date(a.startTime));
 let futureSchedules = futureResult.games.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
 const failedLeagues = getFailedLeagues(todayResult, pastResult, futureResult);
+const allowedPastDates = new Set([-5, -4, -3, -2, -1].map((offset) => getTaipeiDateKey(addDays(targetDate, offset))));
 todayPredictions = mergeLeagueFallback(todayPredictions, existingPayload?.views?.today || [], failedLeagues);
 pastPredictions = mergeLeagueFallback(pastPredictions, existingPayload?.views?.past || [], failedLeagues).sort(
   (a, b) => new Date(b.startTime) - new Date(a.startTime)
-);
+).filter((game) => allowedPastDates.has(getTaipeiDateKey(new Date(game.startTime))));
 futureSchedules = mergeLeagueFallback(futureSchedules, existingPayload?.views?.future || [], failedLeagues).sort(
   (a, b) => new Date(a.startTime) - new Date(b.startTime)
 );
 const oddsResult = await fetchOdds();
 const recentStats = buildRecentStats(pastResult.games);
 todayPredictions = applyOddsToPredictions(todayPredictions, oddsResult.odds);
-pastPredictions = applyOddsToPredictions(pastPredictions, oddsResult.odds);
 todayPredictions = preserveStoredPredictions(todayPredictions, existingPayload);
-pastPredictions = preserveStoredPredictions(pastPredictions, existingPayload);
+pastPredictions = preserveHistoricalPredictions(pastPredictions, existingPayload);
 todayPredictions = attachAnalysis(todayPredictions, recentStats);
-pastPredictions = attachAnalysis(pastPredictions, recentStats);
 todayPredictions = attachSettlements(todayPredictions);
 pastPredictions = attachSettlements(pastPredictions);
 todayPredictions = markFeaturedPredictions(todayPredictions);
