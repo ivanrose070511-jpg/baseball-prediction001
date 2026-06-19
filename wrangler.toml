@@ -7,3 +7,10 @@ workers_dev = true
 directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
+
+[triggers]
+crons = [
+  "20 6 * * 1-5",
+  "20 3 * * 6,0",
+  "0 15 * * *"
+]
