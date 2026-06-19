@@ -8,9 +8,5 @@ directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "single-page-application"
 
-[triggers]
-crons = [
-  "20 6 * * 1-5",
-  "20 3 * * 6,0",
-  "0 15 * * *"
-]
+# Cron triggers are managed in the Cloudflare dashboard because the deployment
+# API token is intentionally not allowed to edit account-level schedules.
