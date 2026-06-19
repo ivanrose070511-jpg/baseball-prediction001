@@ -1,18 +1,9 @@
 import { appendFile } from "node:fs/promises";
 
-const backupSchedules = new Set([
-  "20 6 * * 1-5",
-  "20 3 * * 6,0",
-  "0 15 * * *",
-]);
-
 let shouldRun = true;
 let reason = "primary or manual run";
 
-if (
-  process.env.EVENT_NAME === "schedule" &&
-  backupSchedules.has(process.env.EVENT_SCHEDULE)
-) {
+if (process.env.IS_BACKUP === "true") {
   try {
     const response = await fetch(
       `https://dawn-hill-de60.ivanrose070511.workers.dev/data/predictions.js?freshness=${Date.now()}`,
